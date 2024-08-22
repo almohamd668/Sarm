@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Product from "./productInfo/Product";
+import ProductCart from "../Products/ProductCart";
 // import { Outlet } from "react-router-dom";
 
-const ProductsList = () => {
+const Products = () => {
   const apiUrl = "https://fakestoreapi.com/products";
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -49,11 +49,11 @@ const ProductsList = () => {
         })}
       </div>
 
-      <div className="flex flex-wrap mb-5 gap-2 justify-around">
+      <div className="flex flex-wrap w-full mb-5 gap-1 justify-around">
         {products.map((product) => {
           return (
-            <div className="w-1/3" key={product.id}>
-              <Product product={product} showButton={true} />
+            <div className="w-full" key={product.id}>
+              <ProductCart product={product} showButton={true} />
             </div>
           );
         })}
@@ -62,4 +62,4 @@ const ProductsList = () => {
   );
 };
 
-export default ProductsList;
+export default Products;

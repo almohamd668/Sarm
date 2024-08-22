@@ -1,18 +1,23 @@
 import { useState, useEffect, useRef } from "react";
-import image from "../assets/TwightLogo.svg";
+import image from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 function Header() {
-  const [Links] = useState(["", "About", "Products", "Contact"]);
+  const [Links] = useState([
+    "",
+    "products/product-info/1",
+    "Products",
+    "Contact",
+  ]);
   const headerRef = useRef();
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 75) {
         headerRef.current.style.background = "#0c1524";
-        headerRef.current.style.padding = "20px 0 8px";
+        headerRef.current.style.padding = "12px 0  5px";
       } else {
         headerRef.current.style.background = "transparent";
-        headerRef.current.style.padding = "18px 0  8px";
+        headerRef.current.style.padding = "12px 0  5px";
       }
     });
   }, []);
@@ -26,24 +31,28 @@ function Header() {
   return (
     <header
       ref={headerRef}
-      className="pt-[20px] fixed top-0 left-0 w-full z-50 transition-all duration-200"
+      className=" fixed pt-[8px] left-0 w-full z-50 transition-all duration-200"
     >
       <div
         className="container flex justify-between items-center
         mx-auto px-[30px] gap-[30px] sm:gap-0 "
       >
         <Link to="/">
-          <img src={image} alt="logo" height={60} width={70} />
+          <img src={image} alt="logo" height={150} width={150} />
         </Link>
 
         <nav className="hidden md:block">
-          <ul className="flex items-center gap-[50px]">
+          <ul className="flex items-center  gap-[50px]">
             {Links.map((link) => (
-              <li key={link}>
+              <li
+                key={link}
+                className=" relative after:absolute after:bottom-0 after:left-0 hover:after:w-full
+                 after:h-1 after:border-l after:border-2 after:border-move transition-all  duration-1000"
+              >
                 <Link
                   to={`/${link.toLocaleLowerCase()}`}
                   className="text-white opacity-[0.9]
-                   hover:opacity-[1] hover:underline transition-all duration-700"
+                   hover:opacity-[1]  transition-all duration-700 "
                 >
                   {link == "" ? "Home" : link}
                 </Link>
