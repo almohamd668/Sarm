@@ -5,7 +5,7 @@ import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
 import struction from "../assets/hero6.jpg";
 import panad from "../assets/hero8.jpg";
-import picinj from "../assets/hero9.jpg";
+import picinj from "../assets/hero1.jpg";
 import hero2 from "../assets/hero.jpg";
 
 const Slider = () => {
@@ -20,17 +20,33 @@ const Slider = () => {
         autoplay={{ delay: 1500 }}
         loop={true}
       >
-        <SwiperSlide className="w-full md:h-full h-[214px] ">
-          <img src={struction} alt="Slide 1" className="w-full h-full" />
+        <SwiperSlide className="w-full md:h-full h-[214px]  ">
+          <img
+            src={struction}
+            alt="Slide 1"
+            className="w-full h-full object-cover"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={panad} alt="Slide 1" className="w-full h-full" />
+          <img
+            src={panad}
+            alt="Slide 1"
+            className="w-full h-full object-cover"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={picinj} alt="Slide 1" className="w-full h-full" />
+          <img
+            src={picinj}
+            alt="Slide 1"
+            className="w-full h-full object-cover"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={hero2} alt="Slide 1" className="w-full h-full" />
+          <img
+            src={hero2}
+            alt="Slide 1"
+            className="w-full h-full object-cover"
+          />
         </SwiperSlide>
       </Swiper>
     </section>

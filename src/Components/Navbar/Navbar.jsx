@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import image from "../assets/logo.svg";
+import image from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
-
+import "./navbar.css";
 function Header() {
   const [Links] = useState([
     "",

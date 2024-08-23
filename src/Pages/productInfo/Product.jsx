@@ -36,7 +36,7 @@ const Product = ({ product, showButton }) => {
       </div>
       <div className=" w-full h-[200px] mt-[100px] me-auto">
         <video
-          src={vid1}
+          src="https://res.cloudinary.com/dqrzcmaxm/video/upload/v1724429046/12_chd9rw.mp4"
           controls
           autoPlay
           loop

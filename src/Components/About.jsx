@@ -31,7 +31,12 @@ const About = () => {
               </p>
             </div>
             <div className="col-span-12 mt-4 flex flex-wrap gap-2 justify-start">
-              <a role="button" className="btn" target="_self" href="/about-us">
+              <a
+                role="button"
+                className="btn text-white"
+                target="_self"
+                href="/about-us"
+              >
                 <div> learn more</div>
               </a>
             </div>
