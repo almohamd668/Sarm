@@ -1,4 +1,5 @@
 import About from "../Components/About";
+import Footer from "../Components/Footer";
 import Services from "../Components/Services";
 import Slider from "./../Components/Slider";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <Slider />
       <About />
       <Services />
+      <Footer />
     </main>
   );
 };
