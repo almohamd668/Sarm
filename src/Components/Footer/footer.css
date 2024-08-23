@@ -1,3 +1,37 @@
 .ft-sec {
   margin: 200px 0;
 }
+
+.f-li {
+  margin: 20px 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  cursor: pointer;
+  position: relative;
+}
+
+.f-li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  background-color: #5e33ff;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.f-li:hover::before {
+  content: "";
+  width: 100px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  background-color: #5e33ff;
+}
