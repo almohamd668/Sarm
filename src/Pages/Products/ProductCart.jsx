@@ -8,13 +8,14 @@ const ProductCart = ({ product, showButton }) => {
     <section>
       <div
         className="bg-darkSec rounded
-       shadow-md text-white text-sm h-fit p-5 mb-20 border-0  element-center max-w-[1200px] mx-auto mt-[100px] "
+       shadow-md text-white text-sm h-64 p-5 mb-20 border-0  element-center max-w-[1200px] mx-auto mt-[100px] "
       >
-        <div className="bg-gradient-to-tr from-primary to-transparent rounded-3xl flex items-center justify-center">
+        <div className="bg-gradient-to-tr shadow-md shadow-black from-primary to-transparent rounded-3xl flex items-center justify-center">
           <img
             // src={product.image}
             src={img1}
-            className="max-h-[500px] h-auto w-[700px] hover:scale-150 object-contain rounded-lg  bg-transparent"
+            className="max-h-[500px] h-56 min-w-32 w-[700px] hover:scale-125 transition-all object-contain rounded-lg  bg-transparent"
+
             alt={product.title}
           />
         </div>

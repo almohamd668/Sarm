@@ -49,10 +49,10 @@ const Products = () => {
         })}
       </div>
 
-      <div className="flex flex-wrap w-full mb-5 gap-1 justify-around">
+      <div className="grid grid-cols-3 w-full mb-5 gap-1 justify-around">
         {products.map((product) => {
           return (
-            <div className="w-full" key={product.id}>
+            <div className="w-11/12" key={product.id}>
               <ProductCart product={product} showButton={true} />
             </div>
           );
