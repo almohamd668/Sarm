@@ -16,7 +16,7 @@ const About = () => {
       <div className="container relative mx-auto flex h-full w-full items-start justify-center ">
         <div className=" flex flex-col gap-6 items-start lg:flex-row order-2">
           <div className="flex flex-col w-full w-1/2 text-start ">
-            <h2 className="text-white text-4xl section-title mb-2 font-bold ">
+            <h2 className="text-white text-xl md:text-4xl section-title mb-2 font-bold ">
               OUR MISSION AND VISION Reliability, credibility and excellence are
               the principles that we are standing for
             </h2>

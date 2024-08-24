@@ -31,7 +31,7 @@ function Header() {
   return (
     <header
       ref={headerRef}
-      className=" fixed pt-[8px] left-0 w-full z-50 transition-all duration-200"
+      className="fixed pt-[8px] left-0 w-full z-50 transition-all duration-200"
     >
       <div
         className="container flex justify-between items-center
@@ -46,8 +46,8 @@ function Header() {
             {Links.map((link) => (
               <li
                 key={link}
-                className=" relative after:absolute after:bottom-0 after:left-0 hover:after:w-full
-                 after:h-1 after:border-l after:border-2 after:border-move transition-all  duration-1000"
+                className="hd-li relative after:absolute after:bottom-0 after:left-0 hover:after:w-full
+                 after:h-1.5 after:w-l after:w-2 after:bg-move cursor-pointer"
               >
                 <Link
                   to={`/${link.toLocaleLowerCase()}`}
