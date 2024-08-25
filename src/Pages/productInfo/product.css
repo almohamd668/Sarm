@@ -19,6 +19,7 @@
      animation-name: img;
      animation-duration: 1.5s;
      animation-iteration-count: 1;
+     animation-fill-mode: forwards;
 }
 
 @keyframes img {
@@ -30,7 +31,7 @@
           -o-transform: translate(30%);
      }
 
-     50% {
+     100% {
           transform: translate(0);
           -webkit-transform: translate(0);
           -moz-transform: translate(0);
@@ -38,13 +39,6 @@
           -o-transform: translate(0);
      }
 
-     100% {
-          transform: translate(30%);
-          -webkit-transform: translate(30%);
-          -moz-transform: translate(30%);
-          -ms-transform: translate(30%);
-          -o-transform: translate(30%);
-     }
 }
 
 .con-card {
@@ -57,6 +51,7 @@
      -ms-transform: translateX(-60%);
      -o-transform: translateX(-60%);
      animation-iteration-count: 1;
+     animation-fill-mode: forwards;
 }
 
 
@@ -69,7 +64,7 @@
           -o-transform: translate(-60%);
      }
 
-     50% {
+     100% {
           transform: translate(0);
           -webkit-transform: translate(0);
           -moz-transform: translate(0);
@@ -77,13 +72,6 @@
           -o-transform: translate(0);
      }
 
-     100% {
-          transform: translate(-60%);
-          -webkit-transform: translate(-60%);
-          -moz-transform: translate(-60%);
-          -ms-transform: translate(-60%);
-          -o-transform: translate(-60%);
-     }
 }
 
 .bro-1 {
