@@ -27,6 +27,7 @@ const Slider = () => {
             className="w-full h-full object-cover"
           />
         </SwiperSlide>
+
         <SwiperSlide>
           <img
             src={panad}
@@ -34,6 +35,7 @@ const Slider = () => {
             className="w-full h-full object-cover"
           />
         </SwiperSlide>
+
         <SwiperSlide>
           <img
             src={picinj}
@@ -41,6 +43,7 @@ const Slider = () => {
             className="w-full h-full object-cover"
           />
         </SwiperSlide>
+
         <SwiperSlide>
           <img
             src={hero2}
