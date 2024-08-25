@@ -1,0 +1,11 @@
+.dad-card {
+    display: grid;
+    grid-template-columns:  40% 60%;
+    width: 1000px;
+}
+
+.con-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
