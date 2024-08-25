@@ -39,7 +39,7 @@ const TestimonialsSlid = () => {
       id: 3,
       desc: `Lorem ipsum dolor sit amet
      consectetur adipisicing elit. Dolor, 
-     culpa fugiat perspiciatis non voluptatem quos itaque.
+     culpa fugiat perspiciatis non. voluptatem quos itaque
     `,
       image: profile2,
       position: "Fronted Dev ",
@@ -48,7 +48,7 @@ const TestimonialsSlid = () => {
   ]);
 
   return (
-    <section className="pb-[350px]">
+    <section className="pt-[150px]">
       <div className="container relative">
         <div className="absolute left-[20px] top-[-35px] ">
           <img src={quote} alt="quote" />
@@ -59,6 +59,9 @@ const TestimonialsSlid = () => {
           pagination={{
             dynamicBullets: true,
           }}
+          loopFillGroupWithBlank={true} // add this line
+          slidesPerView={3} // add this line
+          spaceBetween={30} // add this line to add space between cards
           autoplay={{ delay: 1500 }}
           loop={true}
         >
