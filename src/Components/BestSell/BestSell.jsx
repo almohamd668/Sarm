@@ -13,7 +13,6 @@ import {
   Autoplay,
   Virtual,
   Keyboard,
-  Mousewheel,
   Navigation,
 } from "swiper/modules";
 
@@ -26,14 +25,16 @@ const BestSell = () => {
     const products = await axios.get(apiUrl);
     setProducts(products.data);
   };
+
   useEffect(() => {
     getProducts();
     console.log(products);
   }, []);
+
   return (
     <Swiper
       className="h-[50vh] w-5/6"
-      modules={[Navigation, Pagination, Virtual, Mousewheel, Keyboard]}
+      modules={[Navigation, Pagination, Virtual, Keyboard]}
       pagination={{
         dynamicBullets: true,
         clickable: true,
@@ -41,7 +42,7 @@ const BestSell = () => {
       autoplay={{ delay: 3000 }}
       navigation={true}
       loop={true}
-      mousewheel={true}
+    
       keyboard={true}
       spaceBetween={50}
       slidesPerView={3}
@@ -54,7 +55,7 @@ const BestSell = () => {
             key={product.id}
             virtualIndex={product.id}
           >
-            {/* <ProductCart product={product} showButton={true} />*/}
+            <ProductCart product={product} showButton={true} />
           </SwiperSlide>
         );
       })}
