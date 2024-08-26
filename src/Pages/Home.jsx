@@ -5,6 +5,10 @@ import Services from "../Components/Services";
 import Slider from "./../Components/Slider";
 import BestSell from "../Components/BestSell/BestSell";
 
+// import TestApi from "./Products/TestApi";
+
+// <TestApi />
+
 const Home = () => {
   return (
     <main className=" w-full">
@@ -13,6 +17,7 @@ const Home = () => {
       <BestSell />
       <Services />
       <TestimonialsSlid />
+
       <Footer />
     </main>
   );
