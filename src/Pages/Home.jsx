@@ -18,11 +18,7 @@ const Home = () => {
       <BestSell />
       <Services />
       <TestimonialsSlid />
-<<<<<<< HEAD
       <ContactForm/>
-=======
-
->>>>>>> refs/remotes/origin/main
       <Footer />
       
     </main>
