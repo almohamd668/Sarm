@@ -16,11 +16,11 @@ const About = () => {
       <div className="container relative mx-auto flex h-full w-full items-start justify-center ">
         <div className=" flex flex-col gap-6 items-start lg:flex-row order-2">
           <div className="flex flex-col w-full w-1/2 text-start ">
-            <h2 className="text-white text-xl md:text-4xl section-title mb-2 font-bold ">
+            <h2 className="text-white text-xl md:text-4xl section-title mb-2 font-bold text-center italic">
               OUR MISSION AND VISION Reliability, credibility and excellence are
               the principles that we are standing for
             </h2>
-            <div className=" text-white  sm:prose-base prose-custom-blockquote max-w-full">
+            <div className=" text-white  sm:prose-base prose-custom-blockquote max-w-full italic text-center line-clamp-3 px-[35px]">
               <p>
                 For ensuring the quality and effectiveness of our drugs, we have
                 got a dedicated research and development centre where our
@@ -33,7 +33,7 @@ const About = () => {
             <div className="col-span-12 mt-4 flex flex-wrap gap-2 justify-start">
               <a
                 role="button"
-                className="btn text-white"
+                className="btn text-white w-full h-3 font-bold"
                 target="_self"
                 href="/about-us"
               >
@@ -44,7 +44,7 @@ const About = () => {
           <div className=" w-[70%]">
             <img
               src={image}
-              className="mx-auto h-auto max-w-full"
+              className="mx-auto h-full scale-125 max-w-full"
               height={880}
               width={880}
               alt="Logo of the company"

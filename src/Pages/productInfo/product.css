@@ -53,6 +53,9 @@
      animation-iteration-count: 1;
      animation-fill-mode: forwards;
 }
+.con-card:active {
+  transform: scale(1.2); /* تكبير العنصر بنسبة 20% */
+}
 
 
 @keyframes card {
