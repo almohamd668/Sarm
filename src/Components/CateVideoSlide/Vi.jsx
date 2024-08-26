@@ -2,7 +2,7 @@ import { useState } from "react";
 import profile1 from "../../assets/profile-1.jpg";
 import profile2 from "../../assets/profile-2.jpg";
 import quote from "../../assets/bg-quotes.png";
-import TestimonialBox from "./TestimonialBox";
+import TestimonialBox from ".";
 //Swiper imp//
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

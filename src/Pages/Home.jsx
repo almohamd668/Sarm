@@ -12,19 +12,14 @@ import ContactForm from "../Components/ContactForm/ContactFrom";
 
 const Home = () => {
   return (
-    <main className=" w-full">
+    <main className="w-full">
       <Slider />
       <About />
       <BestSell />
       <Services />
       <TestimonialsSlid />
-<<<<<<< HEAD
-      <ContactForm/>
-=======
-
->>>>>>> refs/remotes/origin/main
+      <ContactForm />
       <Footer />
-      
     </main>
   );
 };
