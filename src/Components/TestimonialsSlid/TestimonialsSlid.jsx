@@ -80,5 +80,4 @@ const TestimonialsSlid = () => {
     </section>
   );
 };
-
 export default TestimonialsSlid;

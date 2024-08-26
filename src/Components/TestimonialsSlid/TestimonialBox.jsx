@@ -1,7 +1,7 @@
 const TestimonialBox = ({ name, image, position, desc }) => {
   return (
-    <div className="text-white rounded-[5px] bg-[#21293c]  p-[30px] shadow-[8px_8px_1px_8px_#1c202c] ">
-      <p className="text-sm font-normal tracking-[0.8px] mb-[30px]">{desc}</p>
+    <div className="text-white  rounded-[5px] bg-[#21293c]  p-[30px] shadow-lg hover:shadow-blue-500/50  mb-4 hover:scale-105">
+      <p className="text-sm font-normal italic tracking-[0.8px] mb-[30px]">{desc}</p>
       <div className="flex items-center gap-6 ">
         <img
           src={image}
