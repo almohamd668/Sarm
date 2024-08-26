@@ -5,6 +5,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
 @layer {
+  .neon-effect {
+    @apply shadow-md bg-gradient-to-b from-secondary to-purple-400 p-1 rounded-md;
+  }
+  .neon-effect:hover {
+    @apply shadow-lg;
+  }
   .container {
     @apply mx-auto px-[30px];
   }
