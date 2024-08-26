@@ -18,7 +18,11 @@ const Home = () => {
       <BestSell />
       <Services />
       <TestimonialsSlid />
+<<<<<<< HEAD
       <ContactForm />
+=======
+      <ContactForm/>
+>>>>>>> 1c1d59716d68123693848261e6438a2c17721960
       <Footer />
     </main>
   );
