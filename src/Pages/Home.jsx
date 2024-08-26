@@ -4,6 +4,7 @@ import TestimonialsSlid from "../Components/TestimonialsSlid/TestimonialsSlid";
 import Services from "../Components/Services";
 import Slider from "./../Components/Slider";
 import BestSell from "../Components/BestSell/BestSell";
+import ContactForm from "../Components/ContactForm/ContactFrom";
 
 const Home = () => {
   return (
@@ -13,7 +14,9 @@ const Home = () => {
       <BestSell />
       <Services />
       <TestimonialsSlid />
+      <ContactForm/>
       <Footer />
+      
     </main>
   );
 };
