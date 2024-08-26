@@ -6,6 +6,10 @@ import Slider from "./../Components/Slider";
 import BestSell from "../Components/BestSell/BestSell";
 import ContactForm from "../Components/ContactForm/ContactFrom";
 
+// import TestApi from "./Products/TestApi";
+
+// <TestApi />
+
 const Home = () => {
   return (
     <main className=" w-full">
@@ -14,7 +18,11 @@ const Home = () => {
       <BestSell />
       <Services />
       <TestimonialsSlid />
+<<<<<<< HEAD
       <ContactForm/>
+=======
+
+>>>>>>> refs/remotes/origin/main
       <Footer />
       
     </main>

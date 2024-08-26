@@ -7,7 +7,7 @@ const ProCart = ({ product, showButton }) => {
   return (
     <div
       className="bg-darkSec rounded
-       shadow-md text-white text-sm h-72 p-5 mb-20 border-0  element-center max-w-[1200px] mx-auto"
+       shadow-md text-[#f0f] text-sm h-72 p-5 mb-20 border-0  element-center max-w-[1200px] mx-auto"
     >
       <div className="bg-gradient-to-tr shadow-md shadow-black from-primary to-transparent rounded-3xl flex items-center justify-center">
         <img

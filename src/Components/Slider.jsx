@@ -17,7 +17,8 @@ const Slider = () => {
         pagination={{
           dynamicBullets: true,
         }}
-        autoplay={{ delay: 1500 }}
+        autoplay={{ delay: 4000 }}
+        speed={1000}
         loop={true}
       >
         <SwiperSlide className="w-full md:h-full h-[214px]  ">
