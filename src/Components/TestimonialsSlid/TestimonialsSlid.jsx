@@ -49,21 +49,24 @@ const TestimonialsSlid = () => {
 
   return (
     <section className="pt-[150px]">
-      <div className="container relative">
+      <div className="container relative overflow-visible">
         <div className="absolute left-[20px] top-[-35px] ">
           <img src={quote} alt="quote" />
         </div>
         <Swiper
-          className="mySwiper h-full w-full"
+          className="mySwiper h-full w-full overflow-visible"
           modules={[Pagination, Autoplay]}
           pagination={{
             dynamicBullets: true,
           }}
+          loopFillGroupWithBlank={true} // add this line
+          slidesPerView={3} // add this line
+          spaceBetween={30} // add this line to add space between cards
           autoplay={{ delay: 1500 }}
           loop={true}
         >
           {testData.map((item) => (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide key={item.id}   className="overflow-visible">
               <TestimonialBox
                 desc={item.desc}
                 image={item.image}
