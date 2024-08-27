@@ -5,6 +5,7 @@ import Services from "../Components/Services";
 import Slider from "./../Components/Slider";
 import BestSell from "../Components/BestSell/BestSell";
 import ContactForm from "../Components/ContactForm/ContactFrom";
+import Vi from "../Components/CateVideoSlide/Vi";
 
 // import TestApi from "./Products/TestApi";
 
@@ -18,14 +19,12 @@ const Home = () => {
       <BestSell />
       <Services />
       <TestimonialsSlid />
-<<<<<<< HEAD
+      
       <ContactForm />
-=======
-      <ContactForm/>
->>>>>>> 1c1d59716d68123693848261e6438a2c17721960
+      <Vi/>
       <Footer />
     </main>
-  );
+  )
 };
 
 export default Home;
