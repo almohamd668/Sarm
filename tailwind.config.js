@@ -13,6 +13,7 @@ export default {
         lightest: "#f7f7f7",
         gray: "#1e2122",
         canUse: "#26344f",
+        dBlack: "#0c1524",
       },
       keyframes: {
         moveRight: {

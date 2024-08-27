@@ -1,15 +1,11 @@
-.ft-sec {
-  margin: 200px 0;
-  background-color: #0c1524;
-}
 
-.f-li {
+/* .f-li {
   margin: 20px 0;
   cursor: pointer;
   width: fit-content;
-}
+} */
 
-.f-li::before {
+/* .f-li::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -30,8 +26,8 @@
   height: 5px;
   position: absolute;
   bottom: 0;
-}
+} */
 
-.hr-ft {
+/* .hr-ft {
   width: 800px;
-}
+} */

@@ -2,36 +2,36 @@ import "./footer.css";
 import image from "../../assets/logo.svg";
 const Footer = () => {
   return (
-    <div className=" ft-sec bg-slate-700 p-8 text-zinc-200">
+    <div className="bg-dBlack p-8 text-zinc-200">
       <div className="container grid grid-cols-3">
         <div >
           <ul className="relative text-[18px] justify-center flex flex-col font-light italic">
-            <li className="f-li relative hover:scale-125">
+            <li className="relative my-5 cursor-pointer w-fit before:absolute before:bottom-0 before:bg-move before:h-2 before:w-2 before:transition-all hover:before:w-full  hover:scale-125">
               <p>Inside Pages</p>
             </li>
-            <li className="f-li relative hover:scale-125">
+            <li className="relative my-5 cursor-pointer w-fit before:absolute before:bottom-0 before:bg-move before:h-2 before:w-2 before:transition-all hover:before:w-full  hover:scale-125">
               <p>Courses</p>
             </li>
-            <li className="f-li relative hover:scale-125">
+            <li className="relative my-5 cursor-pointer w-fit before:absolute before:bottom-0 before:bg-move before:h-2 before:w-2 before:transition-all hover:before:w-full  hover:scale-125">
               <p>About Us</p>
             </li>
-            <li className="f-li relative hover:scale-125">
+            <li className="relative my-5 cursor-pointer w-fit before:absolute before:bottom-0 before:bg-move before:h-2 before:w-2 before:transition-all hover:before:w-full  hover:scale-125">
               <p>Contact Us</p>
             </li>
           </ul>
         </div>
         <div>
           <ul className="text-[18px] justify-center flex flex-col font-light italic">
-            <li className="f-li relative hover:scale-125">
+            <li className="relative my-5 cursor-pointer w-fit before:absolute before:bottom-0 before:bg-move before:h-2 before:w-2 before:transition-all hover:before:w-full  hover:scale-125">
               <p>Inside Pages</p>
             </li>
-            <li className="f-li relative hover:scale-125">
+            <li className="relative my-5 cursor-pointer w-fit before:absolute before:bottom-0 before:bg-move before:h-2 before:w-2 before:transition-all hover:before:w-full  hover:scale-125">
               <p>Courses</p>
             </li>
-            <li className="f-li relative hover:scale-125">
+            <li className="relative my-5 cursor-pointer w-fit before:absolute before:bottom-0 before:bg-move before:h-2 before:w-2 before:transition-all hover:before:w-full  hover:scale-125">
               <p>About Us</p>
             </li>
-            <li className="f-li relative hover:scale-125">
+            <li className="relative my-5 cursor-pointer w-fit before:absolute before:bottom-0 before:bg-move before:h-2 before:w-2 before:transition-all hover:before:w-full  hover:scale-125">
               <p>Contact Us</p>
             </li>
           </ul>
@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="hr-ft my-5 mx-auto text-secondary" />
+      {/* <hr className="hr-ft mx-auto text-secondary" /> */}
       <div className="flex justify-center">
         <p>Copy-right &copy; 2024 By Titans Max Plus</p>
       </div>
