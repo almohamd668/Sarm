@@ -3,7 +3,9 @@ import App from "./App";
 import ProductInfo from "./Pages/productInfo/ProductInfo";
 import Products from "./Pages/Products/Products";
 // import Notfound from "./Notfound";
+
 import Home from "./Pages/Home";
+import ContactForm from "./Components/ContactForm/ContactFrom";
 
 export const rout = createBrowserRouter([
   {
@@ -28,7 +30,7 @@ export const rout = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <div>Contact</div>,
+        element: <ContactForm />,
       },
     ],
   },

@@ -49,22 +49,23 @@ const TestimonialsSlid = () => {
 
   return (
     <section className="">
-      <div className="container relative overflow-visible py-[150px]">
+      <div className=" relative overflow-visible py-[150px]">
         <div
           className="absolute inset-0 z-[-1]  bg-cover  bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.431), rgba(0, 0, 0, 0.493)), url("https://res.cloudinary.com/dszdlgz7r/image/upload/v1724849805/Designer__8_-removebg-preview_qhskho.png")`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.431), rgba(0, 0, 0, 0.493)),
+             url("https://res.cloudinary.com/dqrzcmaxm/image/upload/v1724872797/hero5_ykmovn.jpg")`,
             backgroundAttachment: "fixed",
             height: "100%",
             width: "120%",
-            right: "30%"
+            right: "30%",
           }}
         ></div>
         <div className="absolute left-[-10px] top-[-60px] ">
           <img src={quote} alt="quote" width={100} />
         </div>
         <Swiper
-          className="mySwiper h-full w-full overflow-visible"
+          className="mySwiper h-full w-full overflow-visible container"
           modules={[Pagination, Autoplay]}
           pagination={{
             dynamicBullets: true,

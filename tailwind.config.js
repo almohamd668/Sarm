@@ -18,12 +18,23 @@ export default {
       keyframes: {
         moveRight: {
           "0%": { transform: "translateX(0)", opacity: "0" },
-          // "50%": { transform: "translateX()" },
           "100%": { transform: "translateX(10px)", opacity: "1" },
+        },
+        gradientX: {
+          "0%, 100%": {
+            "background-position": "0% 50%",
+          },
+          "50%": {
+            "background-position": "100% 50%",
+          },
         },
       },
       animation: {
-        moveRight: "moveRight 1s ease-in-out ",
+        moveRight: "moveRight 1s ease-in-out",
+        gradientX: "gradientX 5s ease infinite",
+      },
+      backgroundSize: {
+        '200%': '200%',
       },
       screens: {
         sm: "576px",

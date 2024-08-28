@@ -2,21 +2,30 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="grid grid-cols-2 items-center justify-center p-12 gap-5 max-sm:grid-cols-1">
+    <div className="grid grid-cols-2 items-center justify-center p-12 gap-5 max-sm:grid-cols-1 pt-[200px]">
       <div className="mx-auto w-full max-w-[550px]">
         <div className="mb-5">
-      <h1 className="text-primary text-3xl mb-2.5">contact us</h1>
-      <p className="text-lightest">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat delectus quibusdam, doloremque eveniet pariatur laboriosam laborum ut ducimus error ipsam omnis commodi, sed animi dicta! Velit facilis inventore voluptatibus id.</p>
-      </div>
-      <div className="mb-5">
-        <p className="text-lightest">123 street name</p>
-        <p className="text-lightest">cairo</p>
-        <p className="text-lightest">SKSK Area</p>
-      </div>
-      <div className="mb-5">
-        <p className="text-lightest"><span className="text-primary mr-2">Email:</span>me@email.com</p>
-        <p className="text-lightest"><span className="text-primary mr-2">phone:</span>09999999</p>
-      </div>
+          <h1 className="text-primary text-3xl mb-2.5">contact us</h1>
+          <p className="text-lightest">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            delectus quibusdam, doloremque eveniet pariatur laboriosam laborum
+            ut ducimus error ipsam omnis commodi, sed animi dicta! Velit facilis
+            inventore voluptatibus id.
+          </p>
+        </div>
+        <div className="mb-5">
+          <p className="text-lightest">123 street name</p>
+          <p className="text-lightest">cairo</p>
+          <p className="text-lightest">SKSK Area</p>
+        </div>
+        <div className="mb-5">
+          <p className="text-lightest">
+            <span className="text-primary mr-2">Email:</span>me@email.com
+          </p>
+          <p className="text-lightest">
+            <span className="text-primary mr-2">phone:</span>09999999
+          </p>
+        </div>
       </div>
       <div className="mx-auto w-full max-w-[550px]">
         <form action="https://formbold.com/s/FORM_ID" method="POST">
