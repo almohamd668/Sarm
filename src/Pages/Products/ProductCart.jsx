@@ -5,7 +5,7 @@ import img1 from "../../assets/p-2-rebg.png";
 
 const ProductCart = ({ product, showButton }) => {
   return (
-    <section className="sec-card neon-effect">
+    <section className="sec-card neon-effect hover:scale-110">
       <div
         className="bg-darkSec rounded-lg
        shadow-md text-white text-sm border-0 element-center grid grid-cols-1"

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import profile1 from "../../assets/profile-1.jpg";
 import profile2 from "../../assets/profile-2.jpg";
-import quote from "../../assets/bg-quotes.png";
+import quote from "../../assets/22.png";
 import TestimonialBox from "./TestimonialBox";
 //Swiper imp//
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -48,10 +48,20 @@ const TestimonialsSlid = () => {
   ]);
 
   return (
-    <section className="pt-[150px]">
-      <div className="container relative overflow-visible">
-        <div className="absolute left-[20px] top-[-35px] ">
-          <img src={quote} alt="quote" />
+    <section className="">
+      <div className="container relative overflow-visible py-[150px]">
+        <div
+          className="absolute inset-0 z-[-1]  bg-cover  bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.431), rgba(0, 0, 0, 0.493)), url("https://res.cloudinary.com/dszdlgz7r/image/upload/v1724849805/Designer__8_-removebg-preview_qhskho.png")`,
+            backgroundAttachment: "fixed",
+            height: "100%",
+            width: "120%",
+            right: "30%"
+          }}
+        ></div>
+        <div className="absolute left-[-10px] top-[-60px] ">
+          <img src={quote} alt="quote" width={100} />
         </div>
         <Swiper
           className="mySwiper h-full w-full overflow-visible"
@@ -66,7 +76,7 @@ const TestimonialsSlid = () => {
           loop={true}
         >
           {testData.map((item) => (
-            <SwiperSlide key={item.id}   className="overflow-visible">
+            <SwiperSlide key={item.id} className="overflow-visible">
               <TestimonialBox
                 desc={item.desc}
                 image={item.image}

@@ -46,10 +46,17 @@ let  vidApi = "get_videos.php" ;
   return (
     <section className="pt-[150px]">
       <div className="container relative">
-        <div className="absolute left-[20px] top-[-35px] ">
-          <img src={quote} alt="quote" />
-        </div>
-        <div className="w-[80%]">
+        <div
+          className="absolute inset-0 z-[-1]  bg-cover  bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.431), rgba(0, 0, 0, 0.493)), url("https://res.cloudinary.com/dszdlgz7r/image/upload/v1724852498/Designer_13_meexza.jpg")`,
+            backgroundAttachment: "fixed",
+            height: "100%",
+            width: "120%",
+            right: "30%",
+          }}
+        ></div>
+        <div className="w-[100%]">
           <Swiper
             className="mySwiper h-full w-full rounded-[10%]"
             modules={[Autoplay]}
@@ -62,10 +69,7 @@ let  vidApi = "get_videos.php" ;
             speed={1500}
           >
             {products.map((item, idx) => (
-              <SwiperSlide
-                key={idx}
-                className="bg-gradient-to-r from-blue-500 via-green-500 to-purple-500"
-              >
+              <SwiperSlide key={idx} className="">
                 <TestimonialBox image={item.vid_url} name={item.pname} />
               </SwiperSlide>
             ))}

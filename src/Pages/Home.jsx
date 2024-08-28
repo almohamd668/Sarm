@@ -5,7 +5,7 @@ import Services from "../Components/Services";
 import Slider from "./../Components/Slider";
 import BestSell from "../Components/BestSell/BestSell";
 import ContactForm from "../Components/ContactForm/ContactFrom";
-import Vi from "../Components/CateVideoSlide/VidioSlid";
+import VidioSlid from "../Components/CateVideoSlide/VidioSlid";
 
 // import TestApi from "./Products/TestApi";
 
@@ -21,7 +21,7 @@ const Home = () => {
       <TestimonialsSlid />
 
       <ContactForm />
-      <Vi />
+      <VidioSlid />
 
       <Footer />
     </main>
