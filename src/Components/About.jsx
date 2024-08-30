@@ -4,14 +4,17 @@ const About = () => {
   return (
     <div className="relative py-16">
       <div
-        className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat bg-gradient-to-r from-[rgba(5,8,77,0.631)] to-[rgba(0,0,0,0.693)] bg-[url('https://cdn.msaaq.com/pages/239600/picinj2.jpg')] bg-fixed h-auto blur-sm"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.631), rgba(0, 0, 0, 0.693)), url("https://cdn.msaaq.com/pages/239600/picinj2.jpg")`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.493),#4e325163 ),
+           url("https://cdn.msaaq.com/pages/239600/picinj2.jpg")`,
           backgroundAttachment: "fixed",
           height: "auto",
+          filter: "blur(2px)",
+          WebkitFilter: "blur(1px)", // for Safari support
         }}
       ></div>
-      <div className="container relative mx-auto flex h-full w-full items-start justify-center">
+      <div className="px-[150px] pe-[32px] relative mx-auto flex h-full w-full items-start justify-center">
         <div className="flex flex-col gap-6 items-start lg:flex-row order-2">
           <div className="flex flex-col w-full lg:w-1/2 text-start">
             <h2 className="text-white text-xl md:text-4xl section-title mb-2 font-bold text-center italic">
@@ -39,11 +42,11 @@ const About = () => {
               </a>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 relative my-6">
+          <div className="w-full lg:w-1/2 relative ">
             <img
               src={image}
               alt="About Logo"
-              className="mx-auto h-full scale-150"
+              className="mx-auto h-full scale-[1.08] translate-y-[-7px]"
             />
           </div>
         </div>
