@@ -43,6 +43,9 @@ export default {
         xl: "1200px",
         "2xl": "1400px",
       },
+      utilities: {
+        blur: ['blur'],
+      }, // Add this section
     },
   },
   plugins: [],

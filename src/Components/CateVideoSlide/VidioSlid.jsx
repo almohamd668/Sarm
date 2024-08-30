@@ -19,13 +19,15 @@ const TestimonialsSlid = () => {
   const [categories, setCategories] = useState([]);
   //axios.defaults.baseURL = "https://titansmaxplus.com/titans/api/"
   let vidApi = "get_videos.php";
-  let catApi = "categories.php";
-  const fetchFun = async (url, setState, name = null) => {
+  let catApi = "categories.php"; //, name = null
+  const fetchFun = async (url, setState) => {
     try {
-      const response = await axios.get(url, {
-        body: {
-          name: name,
-        },
+      const response = await axios.post(url, {
+        
+        headers: { "Content-Type": "application/json"},
+        data: JSON.stringify({
+          "name": "tablet"
+        })
       });
       setState(response.data);
       console.log(response.data);
@@ -38,7 +40,7 @@ const TestimonialsSlid = () => {
   useEffect(() => {
     // ctName
     fetchFun(catApi, setCategories);
-    fetchFun(vidApi, setProducts,"tablet");
+    fetchFun(vidApi, setProducts);
   }, []);
 
   return (
