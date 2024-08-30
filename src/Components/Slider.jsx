@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
-import struction from "../assets/hero6.jpg";
+import struction from "../assets/hero2.jpg";
 import panad from "../assets/hero8.jpg";
 import picinj from "../assets/hero1.jpg";
 import hero2 from "../assets/hero.jpg";
@@ -28,7 +28,7 @@ const Slider = () => {
               alt="Slide 1"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-4 left-0 p-1 min-w-1 rounded-md bg-opacity-25 bg-black">
+            <div className="absolute bottom-4 left-0 p-1 min-w-1 rounded-md bg-opacity-10 bg-black">
               <p className="text-white italic text-lg p-1 font-mono capitalize">
                 The website aims to promote physical fitness and encourage
                 people <br />
@@ -40,7 +40,7 @@ const Slider = () => {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className="w-full md:h-full h-[214px]">
+        {/* <SwiperSlide className="w-full md:h-full h-[214px]">
           <div className="relative w-full h-full">
             <img
               src={panad}
@@ -95,7 +95,7 @@ const Slider = () => {
               </p>
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </section>
   );

@@ -49,23 +49,31 @@ const TestimonialsSlid = () => {
 
   return (
     <section className="">
-      <div className=" relative overflow-visible py-[150px]">
+      <div className=" relative py-[100px]">
         <div
-          className="absolute inset-0 z-[-1]  bg-cover  bg-center bg-no-repeat"
+          className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.431), rgba(0, 0, 0, 0.493)),
-             url("https://res.cloudinary.com/dqrzcmaxm/image/upload/v1724872797/hero5_ykmovn.jpg")`,
+            backgroundImage: `linear-gradient(rgba(60, 78, 111, 0.5), rgba(12, 25, 36, 0.5 31)), url("https://res.cloudinary.com/dqrzcmaxm/image/upload/v1724872797/hero5_ykmovn.jpg")`,
             backgroundAttachment: "fixed",
             height: "100%",
-            width: "120%",
-            right: "30%",
+            width: "100%", // تعديل العرض ليكون 100%
+            right: "0", // تعديل الموضع ليكون 0
           }}
         ></div>
+
+        <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-8">
+          <div className="flex flex-col text-center lg:col-start-3">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl section-title mb-2 font-bold text-transparent text-trans1">
+              We support more than <br /> 10,000 supplement product
+              professionals
+            </h2>
+          </div>
+        </div>
         <div className="absolute left-[-10px] top-[-60px] ">
           <img src={quote} alt="quote" width={100} />
         </div>
         <Swiper
-          className="mySwiper h-full w-full overflow-visible container"
+          className="mySwiper h-full w-full !overflow-visible container"
           modules={[Pagination, Autoplay]}
           pagination={{
             dynamicBullets: true,
