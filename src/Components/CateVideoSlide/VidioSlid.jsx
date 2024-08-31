@@ -20,15 +20,10 @@ const TestimonialsSlid = () => {
   //axios.defaults.baseURL = "https://titansmaxplus.com/titans/api/"
   let vidApi = "get_videos.php";
   let catApi = "categories.php"; //, name = null
-  const fetchFun = async (url, setState) => {
+  const fetchFun = async (url, setState, name = null) => {
+    console.log(name);
     try {
-      const response = await axios.post(url, {
-        
-        headers: { "Content-Type": "application/json"},
-        data: JSON.stringify({
-          "name": "tablet"
-        })
-      });
+      const response = await axios.post(url, { name: name });
       setState(response.data);
       console.log(response.data);
     } catch (error) {
@@ -44,61 +39,66 @@ const TestimonialsSlid = () => {
   }, []);
 
   return (
-    <section className="">
-      <div className="py-[150px] relative">
+    <section className="relative ">
+      <h2 className="text-center  gap-10 text-white ">Our Products</h2>
+      <div className="py-[150px]">
         <div
           className="absolute inset-0 z-[-1]  bg-cover  bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.331), rgba(0, 0, 0, 0.393)), url("https://cdn.msaaq.com/pages/242547/asset-pink-bg.svg")`,
+            backgroundImage: `
+       linear-gradient(rgba(0, 0, 0, 0.331), 
+       rgba(0, 0, 0, 0.393)),
+        url("https://cdn.msaaq.com/pages/242547/asset-pink-bg.svg")`,
             backgroundAttachment: "fixed",
             height: "100%",
             width: "120%",
             right: "30%",
           }}
         ></div>
-        <h2 className="text-center text-white ">Our Products</h2>
-        <div className="element-center my-5 gap-x-3">
-          <button
-            onClick={() => {
-              fetchFun(vidApi, setProducts);
-            }}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            All
-          </button>
+        <div className=" element-center  container ps-36 ">
+          <div className="element-center flex-col items-start ps-10 gap-4 my-5 gap-x-3">
+            <button
+              onClick={() => {
+                fetchFun(vidApi, setProducts);
+              }}
+              className=" text-white font-bold py-2 px-4 rounded btn2"
+            >
+              All
+            </button>
 
-          {categories.map((cat) => {
-            return (
-              <button
-                key={cat}
-                onClick={() => {
-                  fetchFun(vidApi, setProducts, cat);
-                }}
-                className="bg-[#829fd1] hover:bg-primary text-white font-bold py-2 px-4 rounded"
-              >
-                {cat}
-              </button>
-            );
-          })}
-        </div>
-        <div className="w-[100%]">
-          <Swiper
-            className="mySwiper h-full w-full rounded-[20%]"
-            modules={[Autoplay]}
-            // pagination parameter in modules up
-            // pagination={{
-            //   dynamicBullets: true,
-            // }}
-            autoplay={{ delay: 4000 }}
-            loop={true}
-            speed={1500}
-          >
-            {products.map((item, idx) => (
-              <SwiperSlide key={idx} className="">
-                <TestimonialBox image={item.vid_url} name={item.pname} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            {categories.map((cat) => {
+              return (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    fetchFun(vidApi, setProducts, cat);
+                  }}
+                  className="btn2 text-white font-bold py-2 px-4 "
+                >
+                  {cat}
+                </button>
+              );
+            })}
+          </div>
+          <div className="w-[100%] ps-20">
+            <Swiper
+              className="mySwiper h-full w-full rounded-[20%]"
+              modules={[Autoplay]}
+              // pagination parameter in modules up
+              // pagination={{
+              //   dynamicBullets: true,
+              // }}
+              autoplay={{ delay: 4000 }}
+              loop={true}
+              speed={1500}
+            >
+              {products.map((item, idx) => (
+                <SwiperSlide key={idx} className="">
+                  <TestimonialBox image={item.vid_url} name={item.pname} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </section>

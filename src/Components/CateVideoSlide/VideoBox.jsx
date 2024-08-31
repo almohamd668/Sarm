@@ -1,12 +1,12 @@
 const VideoBox = ({ name, image }) => {
   return (
-    <div className="mySwiper flex items-center justify-center relative mx-4">
+    <div className="mySwiper flex items-center justify-center relative mx-2">
       <video
         src={image}
         loop
         muted
         autoPlay
-        className="h-[400px] w-[40%] object-cover rounded-[20%]   bg-opacity-10"
+        className="h-[400px] w-[50%] object-cover rounded-[20%]   bg-opacity-10"
       ></video>
       <div className="absolute inset-0 flex items-end justify-center pb-4">
         <span
