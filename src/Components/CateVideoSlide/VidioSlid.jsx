@@ -40,8 +40,14 @@ const TestimonialsSlid = () => {
 
   return (
     <section className="relative ">
-      <h2 className="text-center  gap-10 text-white ">Our Products</h2>
-      <div className="py-[150px]">
+      <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-1 pt-[80px]">
+        <div className="flex flex-col text-center lg:col-start-3">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl section-title mb-2 font-bold text-transparent text-trans">
+            OUR PRODUCTS
+          </h2>
+        </div>
+      </div>
+      <div className="py-[20px]">
         <div
           className="absolute inset-0 z-[-1]  bg-cover  bg-center bg-no-repeat"
           style={{

@@ -14,6 +14,14 @@ const About = () => {
           WebkitFilter: "blur(1px)", // for Safari support
         }}
       ></div>
+      <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-8">
+        <div className="flex flex-col text-center lg:col-start-3">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl section-title mb-2 font-bold text-transparent text-trans">
+            ABOUT US
+          </h2>
+        </div>
+        
+      </div>
       <div className="px-[150px] pe-[32px] relative mx-auto flex h-full w-full items-start justify-center">
         <div className="flex flex-col gap-6 items-start lg:flex-row order-2">
           <div className="flex flex-col w-full lg:w-1/2 text-start">

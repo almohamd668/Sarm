@@ -42,12 +42,14 @@ const BestSell = () => {
         </div>
       </div>
       <div
-        className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat bg-gradient-to-r from-[rgba(5,8,77,0.631)] to-[rgba(0,0,0,0.693)] bg-[url('https://cdn.msaaq.com/pages/239600/picinj2.jpg')] bg-fixed h-auto blur-sm"
         style={{
-          backgroundImage: `linear-gradient(rgba(255, 192, 203, 0.231), rgba(138, 43, 226, 0.193)), url("https://cdn.msaaq.com/pages/239600/picinj2.jpg")`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.493),#4e325163 ),
+           url("https://cdn.msaaq.com/pages/239600/picinj2.jpg")`,
           backgroundAttachment: "fixed",
-          filter: "blur(4px)",
           height: "auto",
+          filter: "blur(2px)",
+          WebkitFilter: "blur(1px)", // for Safari support
         }}
       ></div>
       <Swiper
