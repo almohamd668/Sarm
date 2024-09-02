@@ -24,36 +24,17 @@ const Slider = () => {
         <SwiperSlide className="w-full md:h-full h-[214px]">
           <div className="relative w-full h-full">
             <img
-              src={struction}
+              src={panad}
               alt="Slide 1"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-4 left-0 p-1 min-w-1 rounded-md bg-opacity-10 bg-black">
-              <p className="text-white italic text-lg p-1 font-mono capitalize">
+            <div className=" bottom-9 left-5 p-5  min-w-1 rounded-r-[10%] bg-opacity-20 bg-white relative -top-[450.1px] w-[20%]">
+              <p className="text-white italic text-lg p-1  font-mono capitalize leading-relaxed">
                 The website aims to promote physical fitness and encourage
                 people <br />
                 to engage in sports by providing inspiring and useful content.{" "}
                 <br />
                 If you’re interested in sports and fitness🧑🏻‍🔬
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        {/* <SwiperSlide className="w-full md:h-full h-[214px]">
-          <div className="relative w-full h-full">
-            <img
-              src={panad}
-              alt="Slide 2"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-4 left-0 p-1 min-w-1 rounded-md bg-opacity-25 bg-black">
-              <p className="text-white italic text-lg p-1 font-mono capitalize">
-                The website aims to promote physical fitness and encourage
-                people <br />
-                to engage in sports by providing inspiring and useful content.{" "}
-                <br />
-                If you’re interested in sports and fitness✨
               </p>
             </div>
           </div>
@@ -66,13 +47,32 @@ const Slider = () => {
               alt="Slide 3"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-4 left-0 p-1 min-w-1 rounded-md bg-opacity-25 bg-black">
-              <p className="text-white italic text-lg p-1 font-mono capitalize">
+            <div className=" bottom-9 left-5 p-5  min-w-1 rounded-r-[10%] bg-opacity-20 bg-white relative -top-[450.1px] w-[20%]">
+              <p className="text-white italic text-lg p-1  font-mono capitalize leading-relaxed">
                 The website aims to promote physical fitness and encourage
                 people <br />
                 to engage in sports by providing inspiring and useful content.{" "}
                 <br />
-                If you’re interested in sports and fitness😎
+                If you’re interested in sports and fitness🧑🏻‍🔬
+              </p>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide className="w-full md:h-full h-[214px]">
+          <div className="relative w-full h-full">
+            <img
+              src={struction}
+              alt="Slide 1"
+              className="w-full h-full object-cover"
+            />
+            <div className=" bottom-9 left-5 p-5  min-w-1 rounded-r-[10%] bg-opacity-20 bg-white relative -top-[450.1px] w-[20%]">
+              <p className="text-white italic text-lg p-1  font-mono capitalize leading-relaxed">
+                The website aims to promote physical fitness and encourage
+                people <br />
+                to engage in sports by providing inspiring and useful content.{" "}
+                <br />
+                If you’re interested in sports and fitness🧑🏻‍🔬
               </p>
             </div>
           </div>
@@ -85,17 +85,17 @@ const Slider = () => {
               alt="Slide 4"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-4 left-0 p-1 min-w-1 rounded-md bg-opacity-25 bg-black">
-              <p className="text-white italic text-lg p-1 font-mono capitalize">
+            <div className=" bottom-9 left-5 p-5  min-w-1 rounded-r-[10%] bg-opacity-20 bg-white relative -top-[450.1px] w-[20%]">
+              <p className="text-white italic text-lg p-1  font-mono capitalize leading-relaxed">
                 The website aims to promote physical fitness and encourage
                 people <br />
                 to engage in sports by providing inspiring and useful content.{" "}
                 <br />
-                If you’re interested in sports and fitness🔍
+                If you’re interested in sports and fitness🧑🏻‍🔬
               </p>
             </div>
           </div>
-        </SwiperSlide> */}
+        </SwiperSlide>
       </Swiper>
     </section>
   );
