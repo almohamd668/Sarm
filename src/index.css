@@ -94,10 +94,8 @@ a {
 }
 
 .btn2:hover {
-
   border: 1px solid #fff;
   text-shadow: -2px -2px 10px #ffffff7c;
-
   box-shadow: 0 0 5px #ffffff82, inset 0 0 5px #ffffffcd, 0 0 10px #00ffffa2,
      0 0 10px #00ffffa2, 0 0 20px #00ffffa2,  0 0 20px #00ffffa2;
 }

@@ -6,6 +6,7 @@ import Products from "./Pages/Products/Products";
 
 import Home from "./Pages/Home";
 import ContactForm from "./Components/ContactForm/ContactFrom";
+import ConfirmProd from "./Pages/ConfirmProd";
 
 export const rout = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ export const rout = createBrowserRouter([
       {
         path: "contact",
         element: <ContactForm />,
+      },
+      {
+        path: "confirm",
+        element: <ConfirmProd />,
       },
     ],
   },

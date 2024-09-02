@@ -28,8 +28,16 @@ export default {
             "background-position": "100% 50%",
           },
         },
+     
+          'rotate-x': {
+            '0%': { transform: 'rotateY(0deg)' },
+            '50%': { transform: 'rotateY(420deg)' },
+            '100%': { transform: 'rotateY(360deg)' },
+          },
+        
       },
       animation: {
+        rotateY: 'rotate-x 3s ease-in-out ',
         moveRight: "moveRight 1s ease-in-out",
         gradientX: "gradientX 5s ease infinite",
       },
