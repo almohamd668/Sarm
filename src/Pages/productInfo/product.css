@@ -1,9 +1,9 @@
-.dad-card {
+/* .dad-card {
   display: grid;
   grid-template-columns: 60% 40%;
   width: 70%;
   overflow: hidden;
-}
+} */
 
 .card-img {
   width: 70%;
@@ -38,6 +38,7 @@
 }
 
 .con-card {
+     /* height: fit-content; */
   transform: translateX(-60%);
   z-index: 1;
   animation-name: card;
@@ -46,9 +47,7 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-.con-card:active {
-  transform: scale(1.2); /* تكبير العنصر بنسبة 20% */
-}
+
 
 @keyframes card {
   0% {

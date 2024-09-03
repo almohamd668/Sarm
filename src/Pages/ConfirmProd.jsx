@@ -3,51 +3,118 @@ import { Link } from "react-router-dom";
 import img1 from "../assets/p-1.jpg";
 // import "./product.css";
 import SuccessSection from "./../Components/SuccessCart";
+import { useNavigate, useParams,useSearchParams,useLocation } from "react-router-dom";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const ConfirmProd = () => {
+    //axios.defaults.baseURL = "https://titansmaxplus.com/titans/api/"
+    let confLink = "get_p_by_link.php";
+    let DeletProd = "delete_link.php"; //, name = null 
+
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const productId = queryParams.get('id');
+    // const {productId} = useParams();
+    console.log(productId);
+    const navigate = useNavigate();
+    
+    const [searchParams] = useSearchParams();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [product, setProduct] = useState({});
+  const [deletionResponse, setDeletionResponse] = useState({});
+
+  const fetchProduct = async (url, id) => {
+    try {
+      const response = await axios.post(url, { id: id });
+      setProduct(response.data[0]);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const deleteProduct = async (url, id) => {
+    try {
+      const response = await axios.post(url, { id: id });
+      setDeletionResponse(response);
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  useEffect(() => {
+    // Replace 'param' with your actual query parameter name
+    if (productId) {
+      const visitedParams =
+        JSON.parse(localStorage.getItem("visitedParams")) || {};
+      if (visitedParams[productId]) {
+        // Navigate to home if the same parameter is found
+        navigate("/");
+      } else {
+        // Store the parameter in localStorage
+        visitedParams[productId] = true;
+        localStorage.setItem("visitedParams", JSON.stringify(visitedParams));
+      }
+    }
+
+  
+    setIsLoading(true);
+    fetchProduct(confLink, productId);
+
+    const handlePageLeave = async () => {
+      await deleteProduct(DeletProd, productId);
+    };
+
+    window.addEventListener("beforeunload", handlePageLeave);
+
+    const timer = setTimeout(() => {
+      handlePageLeave();
+      navigate("/");
+    }, 6000);
+
+    return () => {
+      window.removeEventListener("beforeunload", handlePageLeave);
+      clearTimeout(timer);
+    };
+  }, [searchParams, navigate]);
+
   return (
     <>
-      <section className="pt-[100px]">
+      <section className="pt-[85px] ">
         <SuccessSection />
-        <div className="dad-card grid grid-cols-3 w-full mx-auto my-10 rounded-lg">
-          <div className="con-img bg-gradient-to-r from-darkSec h-full to-primary  w-full rounded-lg overflow-hidden">
+        <div className="container grid grid-cols-1 md:grid-cols-2 w-full mx-auto my-10 max-w-full md:min-w-[500px] min-h-[400px] rounded-lg ">
+          <div
+            className="con-img
+              bg-gradient-to-r
+            from-darkSec h-full md:min-h-[300px]
+            to-primary  w-full max-w-full
+              rounded-lg overflow-hidden"
+          >
             <img
-              // src={product.image}
-              src={img1}
-              className="card-img transform hover:rotate-6 mx-auto "
+              //   src={img1 }
+              src={product.img_url}
+              className="card-img transform hover:rotate-6 mx-auto max-w-full"
               // alt={product.title}
-              />
-              </div>
+            />
+          </div>
           <div
             className="con-card bg-darkSec
-       text-black text-sm border-0 w-full h-5/6 my-auto rounded-tr-lg rounded-br-lg p-5"
+             text-black text-sm border-0 w-full 
+             my-auto rounded-tr-lg rounded-br-lg p-5 h-fit min-h-[300px] max-w-full"
           >
             <div className="address my-5">
               <h1 className="text-xl md:text-3xl  font-bold  text-white my-5">
-                Hellooooo 
+                {product.pname}
               </h1>
-              <p className="text-lg text-white">
-                1-customer review | add review
-              </p>
+              <p className="text-lg text-white">product.price</p>
             </div>
-            <h4 className="my-1 text-sm md:text-3xl text-white">
-              Hellooooo Frooooooo Eyadooooo
+            <h4 className="my-1 text-sm md:text-lg text-white/95">
+              {product.description}
             </h4>
-            {/*  showButton ? (
-            <Link
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              to={`product-info/${product.id}`}
-            >
-              info
-            </Link>
-          ) : (
-            <p className="text-lg leading-6 text-white mt-3 mb-10">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Voluptates accusantium asperiores cumque recusandae quaerat, porro
-              doloribus beatae explicabo in natus alias itaque expedita et
-              consequuntur unde eum quasi quod. Optio?
-            </p>
-          )  */}
           </div>
         </div>
       </section>
