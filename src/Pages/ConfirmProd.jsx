@@ -61,10 +61,10 @@ const ConfirmProd = () => {
 
     window.addEventListener("beforeunload", handlePageLeave);
 
-    const timer = setTimeout(() => {
-      handlePageLeave();
-      navigate("/");
-    }, 6000);
+    // const timer = setTimeout(() => {
+    //   handlePageLeave();
+    //   navigate("/");
+    // }, 6000);
 
     return () => {
       window.removeEventListener("beforeunload", handlePageLeave);
