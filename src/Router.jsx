@@ -39,8 +39,8 @@ export const rout = createBrowserRouter([
       },
     ],
   },
-  // {
-  //   path: "",
-  //   element: <Notfound />,
-  // },
+  {
+    path: "*",
+    element: <Notfound />,
+  },
 ]);
