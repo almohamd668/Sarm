@@ -1,26 +1,16 @@
-import { Link } from "react-router-dom";
-
-import img1 from "../assets/p-1.jpg";
-// import "./product.css";
 import SuccessSection from "./../Components/SuccessCart";
-import { useNavigate, useParams,useSearchParams,useLocation } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 const ConfirmProd = () => {
-    //axios.defaults.baseURL = "https://titansmaxplus.com/titans/api/"
-    let confLink = "get_p_by_link.php";
-    let DeletProd = "delete_link.php"; //, name = null 
 
-    const location = useLocation();
-    const queryParams = new URLSearchParams(location.search);
-    const productId = queryParams.get('id');
-    // const {productId} = useParams();
-    console.log(productId);
-    const navigate = useNavigate();
-    
-    const [searchParams] = useSearchParams();
+  let confLink = "get_p_by_link.php";
+  let DeletProd = "delete_link.php"; //, name = null 
+  const {productId} = useParams();
+  const navigate = useNavigate();
+  console.log(productId);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [product, setProduct] = useState({});
@@ -80,7 +70,7 @@ const ConfirmProd = () => {
       window.removeEventListener("beforeunload", handlePageLeave);
       clearTimeout(timer);
     };
-  }, [searchParams, navigate]);
+  }, [productId]);
 
   return (
     <>

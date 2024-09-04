@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductCart from "../Products/ProductCart";
-import axios from "axios";
+import useAxios from "../../API/axiosGlobal";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -12,9 +12,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(
-          "https://titansmaxplus.com/titans/api/get_full_info.php"
-        );
+        const response = await useAxios.get("get_full_info.php");
         setProducts(response.data);
       } catch (error) {
         setError(error.message);
@@ -26,7 +24,7 @@ const Products = () => {
   }, []);
 
   const handleShowMore = () => {
-    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts +3); // زيادة عدد المنتجات المعروضة
+    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 3); // زيادة عدد المنتجات المعروضة
   };
 
   return (

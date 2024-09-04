@@ -34,7 +34,7 @@ export const rout = createBrowserRouter([
         element: <ContactForm />,
       },
       {
-        path: "confirm",
+        path: "confirm/:productId",
         element: <ConfirmProd />,
       },
     ],

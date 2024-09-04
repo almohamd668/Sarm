@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import useAxios from "../../API/axiosGlobal";
 // import profile2 from "../../assets/profile-2.jpg";
-import video1 from "../../assets/video1.mp4";
-import video2 from "../../assets/video_2.mp4";
-import quote from "../../assets/bg-quotes.png";
+
 import TestimonialBox from "./VideoBox";
 //Swiper imp//
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,7 +21,7 @@ const TestimonialsSlid = () => {
   const fetchFun = async (url, setState, name = null) => {
     console.log(name);
     try {
-      const response = await axios.post(url, { name: name });
+      const response = await useAxios.post(url, { name: name });
       setState(response.data);
       console.log(response.data);
     } catch (error) {
