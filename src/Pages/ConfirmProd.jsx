@@ -2,7 +2,7 @@ import SuccessSection from "./../Components/SuccessCart";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
-import axios from "axios";
+import useAxios from "../API/axiosGlobal";
 
 const ConfirmProd = () => {
 
@@ -18,7 +18,7 @@ const ConfirmProd = () => {
 
   const fetchProduct = async (url, id) => {
     try {
-      const response = await axios.post(url, { id: id });
+      const response = await useAxios.post(url, { id: id });
       setProduct(response.data[0]);
     } catch (error) {
       setError(error.message);
@@ -29,7 +29,7 @@ const ConfirmProd = () => {
 
   const deleteProduct = async (url, id) => {
     try {
-      const response = await axios.post(url, { id: id });
+      const response = await useAxios.post(url, { id: id });
       setDeletionResponse(response);
     } catch (error) {
       setError(error.message);
@@ -61,10 +61,10 @@ const ConfirmProd = () => {
 
     window.addEventListener("beforeunload", handlePageLeave);
 
-    // const timer = setTimeout(() => {
-    //   handlePageLeave();
-    //   navigate("/");
-    // }, 6000);
+    const timer = setTimeout(() => {
+      handlePageLeave();
+      navigate("/");
+    }, 6000);
 
     return () => {
       window.removeEventListener("beforeunload", handlePageLeave);
