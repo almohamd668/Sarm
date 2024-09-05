@@ -2,9 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import ProductInfo from "./Pages/productInfo/ProductInfo";
 import Products from "./Pages/Products/Products";
-// import Notfound from "./Notfound";
+
 
 import Home from "./Pages/Home";
+import Notfound from "./Notfound";
 import ContactForm from "./Components/ContactForm/ContactFrom";
 import ConfirmProd from "./Pages/ConfirmProd";
 
@@ -41,6 +42,6 @@ export const rout = createBrowserRouter([
   },
   {
     path: "*",
-    element: <Notfound />,
+    element: <Notfound /> ,
   },
 ]);
