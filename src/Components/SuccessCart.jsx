@@ -28,7 +28,7 @@ const SuccessSection = () => {
                !prose-currentColor 
                prose-custom-blockquote max-w-full"
               >
-                <p>We Are Happy Our Products Can Help you</p>
+                <p>The product is original. Thank you for choosing Titans Max Plus</p>
               </div>
             </div>
             <img

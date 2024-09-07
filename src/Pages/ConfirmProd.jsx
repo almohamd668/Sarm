@@ -18,7 +18,7 @@ const ConfirmProd = () => {
   const [error, setError] = useState(null);
   const [product, setProduct] = useState(null);
   const [deletionResponse, setDeletionResponse] = useState({});
-  const [prevPath, setPrevPath] = useState(location.pathname); 
+  
   const fetchProduct = async (url, id) => {
     console.log("fetchProductNum : ", id);
     try {
@@ -51,26 +51,7 @@ const ConfirmProd = () => {
     }
   };
 
-  // useEffect(() => {
-  //   fetchProduct(confLink, productId);
 
-  //   const handlePageLeave = async () => {
-  //     await deleteProduct(DeletProd, productId);
-  //   };
-
-  //   const timer = setTimeout(() => {
-  //     handlePageLeave();
-  //     navigate("/*", { replace: true });
-  //   }, 300000);
-  //   navigate.addListener(handlePageLeave);
-
-  //   window.addEventListener("beforeunload", handlePageLeave);
-
-  //   return () => {
-  //     window.removeEventListener("beforeunload", handlePageLeave);
-  //     clearTimeout(timer);
-  //   };
-  // }, [productId, history]);
 
 
   useEffect(() => {
@@ -84,19 +65,8 @@ const ConfirmProd = () => {
     // Set a timer for 5 minutes (300000 milliseconds)
     const timer = setTimeout(() => {
       handlePageLeave();
-      // navigate("/*", { replace: true });
-    }, 9000);
    
-    // Handle navigation changes
-    // const handleLocationChange = () => {
-    //   handlePageLeave();
-    //   clearTimeout(timer);
-    //   console.log('User is navigating away!');
-    // };handleLocationChange();
-
-    // if (location.pathname !== prevPath) { 
-    //   handlePageLeave();
-    // }
+    }, 1000);
 
     // Listen for location changes
     const unlisten = () => {
@@ -161,7 +131,7 @@ const ConfirmProd = () => {
                   {product.pname}
                 </h1>
                 <h3 className="text-sm md:text-lg text-white">
-                  Contain an{" "}
+                  Contain {" "}
                   <strong className="ps-4">{product.num_of_pieces}</strong>
                 </h3>
               </div>

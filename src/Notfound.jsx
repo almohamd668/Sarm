@@ -2,7 +2,7 @@ const Notfound = () => {
   return (
     <section
       id="block-8f691a0"
-      className="h-[500px]  bg-gradient-to-b from-[rgb(154,174,212)]
+      className="h-[100vh]  bg-gradient-to-b from-[rgb(154,174,212)]
       to-[#2d3b57]   relative 
       overflow-hidden px-4 py-18
        lg:!p-16 block-type-image"
