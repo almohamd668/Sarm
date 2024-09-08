@@ -5,7 +5,7 @@ import "./navbar.css";
 function Header() {
   const [Links] = useState([
     "",
-    "products/product-info/1",
+
     "Products",
     "Contact",
   ]);
@@ -27,7 +27,8 @@ function Header() {
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
+  // hd-li relative after:absolute after:bottom-0 after:left-0 hover:after:w-full
+  // after:h-1.5 after:w-l after:w-2 after:bg-move cursor-pointer
   return (
     <header
       ref={headerRef}
@@ -46,13 +47,12 @@ function Header() {
             {Links.map((link) => (
               <li
                 key={link}
-                className="hd-li relative after:absolute after:bottom-0 after:left-0 hover:after:w-full
-                 after:h-1.5 after:w-l after:w-2 after:bg-move cursor-pointer"
+                className=""
               >
                 <Link
                   to={`/${link.toLocaleLowerCase()}`}
                   className="text-white opacity-[0.9]
-                   hover:opacity-[1]  transition-all duration-700 "
+                   hover:opacity-[1]  transition-all duration-700 btn3  py-1"
                 >
                   {link == "" ? "Home" : link}
                 </Link>
@@ -64,7 +64,7 @@ function Header() {
         {/** mobile toggle */}
         <nav className="block md:hidden">
           <button
-            className="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 transition-all duration-300"
+            className="flex items-center gap-2 p-2 rounded-md text-white  hover:bg-gray-100 transition-all relative z-50 duration-300"
             onClick={handleToggleMenu}
           >
             <svg
@@ -83,22 +83,27 @@ function Header() {
             </svg>
             <span className="sr-only">Toggle navigation</span>
           </button>
-          <ul
-            className={`${
-              menuOpen ? "block" : "hidden"
-            } md:flex flex-col gap-4 p-4 bg-white shadow-md rounded-md`}
-          >
-            {Links.map((link) => (
-              <li key={link}>
-                <Link
-                  to={`/${link.toLocaleLowerCase()}`}
-                  className="text-gray-600 hover:text-gray-900 transition-all duration-300"
+          <div className={`${menuOpen ? "flex" : "hidden"}`}>
+            <ul
+              className={` flex flex-col gap-4 p-4 bg-gradient-to-r from-primary to-darkSec   -z-10
+                  shadow-md rounded-md justify-center items-center absolute w-[100vw] top-0 left-0 h-[100vh] `}
+            >
+              {Links.map((link) => (
+                <li
+                  key={link}
+                  className="bg-black/20 backdrop-blur-lg w-full text-center border-b border-cyan
+                    shadow-cyan py-2.5 text-lg font-medium text-white rounded-lg mt-1.5 hover:bg-gradient-to-r from-primary to-darkSec hover:backdrop-blur-lg "
                 >
-                  {link == "" ? "Home" : link}
-                </Link>
-              </li>
-            ))}
-          </ul>
+                  <Link
+                    to={`/${link.toLocaleLowerCase()}`}
+                    className="text-gray-600 hover:text-gray-900 transition-all duration-300"
+                  >
+                    {link == "" ? "Home" : link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
