@@ -38,29 +38,32 @@ const TestimonialsSlid = () => {
 
   return (
     <section className="relative ">
-      <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-1 pt-[80px]">
-        <div className="flex flex-col text-center lg:col-start-3">
-          <h2 className="text-3xl md:text-4xl lg:text-6xl section-title mb-2 font-bold text-transparent text-trans">
-            OUR PRODUCTS
-          </h2>
-        </div>
-      </div>
+     
+    
       <div className="py-[20px]">
+      
+    
         <div
-          className="absolute inset-0 z-[-1]  bg-cover  bg-center bg-no-repeat"
+          className="absolute inset-0 z-[-1]  bg-cover  bg-center bg-no-repeat h-full w-full"
           style={{
             backgroundImage: `
        linear-gradient(rgba(0, 0, 0, 0.331), 
        rgba(0, 0, 0, 0.393)),
         url("https://cdn.msaaq.com/pages/242547/asset-pink-bg.svg")`,
             backgroundAttachment: "fixed",
-            height: "100%",
-            width: "120%",
-            right: "30%",
+          
           }}
         ></div>
-        <div className=" element-center  container ps-36 ">
-          <div className="element-center flex-col items-start ps-10 gap-4 my-5 gap-x-3">
+        <div className=" element-center  container md:ps-26 flex-col md:flex-row gap-3 md:gap-6 justify-around">
+          <div className="flex flex-col ">  
+              <h2 className=" text-2xl md:text-3xl md:ms-9 w-[270px] text-center  md:font-bold text-transparent text-trans1">
+                 OUR PRODUCTS
+              </h2>
+                <div className="element-center md:flex-col flex-wrap items-center md:items-start md:ps-10 gap-2
+                  md:gap-4 my-5  md:gap-x-3 max-w-full w-[280px] md:w-auto">
+                  
+                
+           
             <button
               onClick={() => {
                 fetchFun(vidApi, setProducts);
@@ -77,14 +80,16 @@ const TestimonialsSlid = () => {
                   onClick={() => {
                     fetchFun(vidApi, setProducts, cat);
                   }}
-                  className="btn2 text-white font-bold py-2 px-4 "
+                  className="btn2  "
                 >
-                  {cat}
+                  {cat == "special_products" ? "Exclusives" : cat}
                 </button>
               );
             })}
           </div>
-          <div className="w-[100%] ps-20">
+          </div>
+
+          <div className="w-full max-w-[90%] ">
             <Swiper
               className="mySwiper h-full w-full rounded-[20%]"
               modules={[Autoplay]}
@@ -98,7 +103,7 @@ const TestimonialsSlid = () => {
             >
               {products.map((item, idx) => (
                 <SwiperSlide key={idx} className="">
-                  <TestimonialBox image={item.vid_url} name={item.pname} />
+                   <TestimonialBox image={item.vid_url} name={item.pname} /> 
                 </SwiperSlide>
               ))}
             </Swiper>
