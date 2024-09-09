@@ -83,6 +83,7 @@ a {
   opacity: 0.5;
   background-image: linear-gradient(to top right, #7c3aed, transparent);
 }
+
 .btn2 {
   backdrop-filter: blur(3px);
   font-weight: 700;
@@ -94,13 +95,25 @@ a {
   border-radius: 14px 22px 22px;
 }
 
+
 .btn2:hover {
   border: 1px solid #fff;
   text-shadow: -2px -2px 10px #ffffff7c;
   box-shadow: 0 0 5px #ffffff82, inset 0 0 5px #ffffffcd, 0 0 10px #00ffffa2,
     0 0 10px #00ffffa2, 0 0 20px #00ffffa2, 0 0 20px #00ffffa2;
 }
+@media (max-width: 765px) {
+  .btn2 {
+   
+    font-weight: 600;
+ 
+    font-size: 16px;
+   
+    padding: 5px 14px;
 
+  }
+  
+}
 .btn3 {
   backdrop-filter: blur(3px);
   font-weight: 600;

@@ -6,11 +6,11 @@ const VideoBox = ({ name, image }) => {
         loop
         muted
         autoPlay
-        className="h-[400px] w-[50%] object-cover rounded-[20%] bg-opacity-10"
+        className=" h-[300px] md:h-[400px] w-full md:w-[50%] object-cover rounded-[20%] bg-opacity-10"
       ></video>
       <div className="absolute inset-0 flex items-end justify-center pb-4">
         <span
-          className="block text-4xl font-bold italic bg-gradient-to-r from-primary via-cyan/80 to-[#5e33ff] bg-200% text-transparent animate-gradientX z-50"
+          className="block text-xl md:text-4xl font-bold italic bg-gradient-to-r from-primary via-cyan/80 to-[#5e33ff] bg-200% text-transparent animate-gradientX z-50"
           style={{
             backgroundClip: "text",
             WebkitBackgroundClip: "text",

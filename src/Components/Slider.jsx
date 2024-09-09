@@ -8,6 +8,29 @@ import panad from "../assets/hero8.jpg";
 import picinj from "../assets/hero1.jpg";
 import hero2 from "../assets/hero.jpg";
 
+const slides = [
+  {
+    id: 1,
+    image: panad,
+    alt: "Slide 1",
+  },
+  {
+    id: 2,
+    image: picinj,
+    alt: "Slide 3",
+  },
+  {
+    id: 3,
+    image: struction,
+    alt: "Slide 1",
+  },
+  {
+    id: 4,
+    image: hero2,
+    alt: "Slide 4",
+  },
+];
+
 const Slider = () => {
   return (
     <section className="w-full md:h-screen h-[350px] mt-0 pt-[80px]">
@@ -21,81 +44,27 @@ const Slider = () => {
         speed={1000}
         loop={true}
       >
-        <SwiperSlide className="w-full md:h-full h-[214px]">
-          <div className="relative w-full h-full">
-            <img
-              src={panad}
-              alt="Slide 1"
-              className="w-full h-full object-cover"
-            />
-            <div className=" bottom-9 left-5 p-5  min-w-1 rounded-r-[10%] bg-opacity-20 bg-white relative -top-[450.1px] w-[20%]">
-              <p className="text-white italic text-lg p-1  font-mono capitalize leading-relaxed">
-                The website aims to promote physical fitness and encourage
-                people <br />
-                to engage in sports by providing inspiring and useful content.{" "}
-                <br />
-                If you’re interested in sports and fitness🧑🏻‍🔬
-              </p>
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.id} className="w-full md:h-full h-[214px]">
+            <div className="relative w-full h-full">
+              <img
+                src={slide.image}
+                alt={slide.alt}
+                className="w-full h-full object-cover"
+              />
+              <div className=" bottom-9 left-2 md:left-5 -top-[220px] md:-top-[450.1px]  relative  md:p-5 bg-gradient-to-r from-[#11609d80] to-[#739eb4a6] backdrop-blur-[2px] 
+               rounded-r-[10%] bg-opacity-20 bg-white   w-[55%]  md:w-[20%]">
+                <p className="text-white italic text-[13px] md:text-lg p-1  font-mono capitalize md:leading-relaxed">
+                  The website aims to promote physical fitness and encourage
+                  people <br />
+                  to engage in sports by providing inspiring and useful content.{" "}
+                  <br />
+                  If you’re interested in sports and fitness🧑🏻‍🔬
+                </p>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="w-full md:h-full h-[214px]">
-          <div className="relative w-full h-full">
-            <img
-              src={picinj}
-              alt="Slide 3"
-              className="w-full h-full object-cover"
-            />
-            <div className=" bottom-9 left-5 p-5  min-w-1 rounded-r-[10%] bg-opacity-20 bg-white relative -top-[450.1px] w-[20%]">
-              <p className="text-white italic text-lg p-1  font-mono capitalize leading-relaxed">
-                The website aims to promote physical fitness and encourage
-                people <br />
-                to engage in sports by providing inspiring and useful content.{" "}
-                <br />
-                If you’re interested in sports and fitness🧑🏻‍🔬
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="w-full md:h-full h-[214px]">
-          <div className="relative w-full h-full">
-            <img
-              src={struction}
-              alt="Slide 1"
-              className="w-full h-full object-cover"
-            />
-            <div className=" bottom-9 left-5 p-5  min-w-1 rounded-r-[10%] bg-opacity-20 bg-white relative -top-[450.1px] w-[20%]">
-              <p className="text-white italic text-lg p-1  font-mono capitalize leading-relaxed">
-                The website aims to promote physical fitness and encourage
-                people <br />
-                to engage in sports by providing inspiring and useful content.{" "}
-                <br />
-                If you’re interested in sports and fitness🧑🏻‍🔬
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="w-full md:h-full h-[214px]">
-          <div className="relative w-full h-full">
-            <img
-              src={hero2}
-              alt="Slide 4"
-              className="w-full h-full object-cover"
-            />
-            <div className=" bottom-9 left-5 p-5  min-w-1 rounded-r-[10%] bg-opacity-20 bg-white relative -top-[450.1px] w-[20%]">
-              <p className="text-white italic text-lg p-1  font-mono capitalize leading-relaxed">
-                The website aims to promote physical fitness and encourage
-                people <br />
-                to engage in sports by providing inspiring and useful content.{" "}
-                <br />
-                If you’re interested in sports and fitness🧑🏻‍🔬
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );
