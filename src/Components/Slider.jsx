@@ -33,7 +33,7 @@ const slides = [
 
 const Slider = () => {
   return (
-    <section className="w-full md:h-screen h-[350px] mt-0 pt-[80px]">
+    <section className="w-full h-screen mt-0 pt-[80px]">
       <Swiper
         className="mySwiper h-full w-full"
         modules={[Pagination, Autoplay]}
@@ -52,14 +52,16 @@ const Slider = () => {
                 alt={slide.alt}
                 className="w-full h-full object-cover"
               />
-              <div className=" bottom-9 left-2 md:left-5 -top-[220px] md:-top-[450.1px]  relative  md:p-5 bg-gradient-to-r from-[#11609d80] to-[#739eb4a6] backdrop-blur-[2px] 
-               rounded-r-[10%] bg-opacity-20 bg-white   w-[55%]  md:w-[20%]">
+              <div
+                className=" bottom-9 left-1 md:left-5 -top-[180px] md:-top-[450.1px]  relative  md:p-5 bg-gradient-to-r from-[#11609da6] to-[#739eb4a6] backdrop-blur-[2px] 
+               rounded-r-[10%] bg-opacity-20 bg-white   w-[55%]  md:w-[20%]"
+              >
                 <p className="text-white italic text-[13px] md:text-lg p-1  font-mono capitalize md:leading-relaxed">
                   The website aims to promote physical fitness and encourage
                   people <br />
                   to engage in sports by providing inspiring and useful content.{" "}
                   <br />
-                  If you’re interested in sports and fitness🧑🏻‍🔬
+               <span className="hidden md:inline">   If you’re interested in sports and fitness🧑🏻‍🔬</span>
                 </p>
               </div>
             </div>

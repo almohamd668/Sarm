@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/virtual";
 import "swiper/css/navigation";
-
+import { useScreenWidth } from "../../Helpers/useWindowSize";
 import {
   Pagination,
   Autoplay,
@@ -17,15 +17,17 @@ import {
 } from "swiper/modules";
 
 const BestSell = () => {
+  const width = useScreenWidth();
   const apiUrl = "https://fakestoreapi.com/products";
   const [products, setProducts] = useState([]);
-  const swiper = useSwiper();
-
+ // const swiper = useSwiper();
+  let slideView =  width >= 768 ? 3: 1;
+  // let slideView = width >= 1200 ? 4 : width >= 768 ? 3 : 1;
   const getProducts = async () => {
     const products = await axios.get(apiUrl);
     setProducts(products.data);
   };
-
+ 
   useEffect(() => {
     getProducts();
     console.log(products);
@@ -34,9 +36,9 @@ const BestSell = () => {
 
   return (
     <section className="relative">
-      <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-8 pt-[100px]">
+      <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-2 md:mb-8 pt-[30px] md:pt-[100px]">
         <div className="flex flex-col text-center lg:col-start-3">
-          <h2 className="text-3xl md:text-4xl lg:text-6xl section-title mb-2 font-bold text-transparent text-trans">
+          <h2 className="text-xl md:text-4xl lg:text-6xl section-title md:mb-2 font-bold text-transparent text-trans">
             SPECIAL PRODUCTS
           </h2>
         </div>
@@ -64,7 +66,8 @@ const BestSell = () => {
         loop={true}
         keyboard={true}
         spaceBetween={2}
-        slidesPerView={3}
+        
+        slidesPerView={ slideView }
         virtual
       >
         {products.map((product) => {

@@ -40,7 +40,7 @@ const TestimonialsSlid = () => {
     <section className="relative ">
      
     
-      <div className="py-[20px]">
+      <div className="py-[60px]">
       
     
         <div
@@ -68,7 +68,7 @@ const TestimonialsSlid = () => {
               onClick={() => {
                 fetchFun(vidApi, setProducts);
               }}
-              className=" text-white font-bold py-2 px-4 rounded btn2"
+              className="btn2"
             >
               All
             </button>
@@ -80,7 +80,7 @@ const TestimonialsSlid = () => {
                   onClick={() => {
                     fetchFun(vidApi, setProducts, cat);
                   }}
-                  className="btn2  "
+                  className="btn2"
                 >
                   {cat == "special_products" ? "Exclusives" : cat}
                 </button>
