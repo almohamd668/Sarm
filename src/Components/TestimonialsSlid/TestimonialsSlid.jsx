@@ -4,16 +4,28 @@ import profile2 from "../../assets/profile-2.jpg";
 import profile3 from "../../assets/profile-3.jpg";
 import quote from "../../assets/22.png";
 import TestimonialBox from "./TestimonialBox";
+import { useScreenWidth } from "../../Helpers/useWindowSize";
+
 //Swiper imp//
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import { Pagination, Autoplay } from "swiper/modules";
+import {
+  Pagination,
+  Autoplay,
+  Virtual,
+  Keyboard,
+  Navigation,
+} from "swiper/modules";
+
 
 // <div className=" grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 relative z-10"></div>
 
 const TestimonialsSlid = () => {
+  const width = useScreenWidth();
+  let slideView =  width >= 768 ? 3: 1;
+
   const [testData, setTestData] = useState([
     {
       id: 1,
@@ -43,6 +55,52 @@ const TestimonialsSlid = () => {
       position: "Blogger ",
       name: "Jiff Helman",
     },
+    {
+      id: 4,
+      desc: `The products offered by this company 
+      are of the best types available in stores
+    `,
+      image: profile1,
+      position: "Customer",
+      name: "Jhon Northel",
+    },
+
+    {
+      id: 5,
+      desc: `One of the best companies that offer high-level 
+      products in addition to taking care of your health
+    `,
+      image: profile2,
+      position: "Trainer",
+      name: "Ropenson Edward",
+    },
+    {
+      id: 6,
+      desc: `One of the most successful 
+      companies globally in addition to overall satisfaction 
+    `,
+      image: profile3,
+      position: "Blogger ",
+      name: "Jiff Helman",
+    },
+    {
+      id: 7,
+      desc: `One of the best companies that offer high-level 
+      products in addition to taking care of your health
+    `,
+      image: profile2,
+      position: "Trainer",
+      name: "Ropenson Edward",
+    },
+    {
+      id: 8,
+      desc: `One of the most successful 
+      companies globally in addition to overall satisfaction 
+    `,
+      image: profile3,
+      position: "Blogger ",
+      name: "Jiff Helman",
+    },
   ]);
 
   return (
@@ -61,8 +119,8 @@ const TestimonialsSlid = () => {
 
         <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-8">
           <div className="flex flex-col text-center lg:col-start-3">
-            <h2 className="text-3xl md:text-4xl lg:text-6xl section-title mb-2 font-bold text-transparent text-trans1">
-              Customers Reviews
+            <h2 className="text-2xl md:text-4xl lg:text-6xl section-title mb-2 font-bold text-transparent text-trans1">
+              Customer Reviews
             </h2>
           </div>
         </div>
@@ -70,16 +128,19 @@ const TestimonialsSlid = () => {
           <img src={quote} alt="quote" width={100} />
         </div>
         <Swiper
-          className="mySwiper h-full w-full !overflow-visible container"
-          modules={[Pagination, Autoplay]}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          loopFillGroupWithBlank={true} // add this line
-          slidesPerView={3} // add this line
-          spaceBetween={30} // add this line to add space between cards
-          autoplay={{ delay: 1500 }}
-          loop={true}
+        className="flex items-center justify-center"
+        modules={[Navigation, Pagination, Virtual, Keyboard]}
+        pagination={{
+          dynamicBullets: true,
+          clickable: true,
+        }}
+        autoplay={{ delay: 3000 }}
+        navigation={true}
+        loop={true}
+        keyboard={true}
+        spaceBetween={2}
+        slidesPerView={ slideView }
+      
         >
           {testData.map((item) => (
             <SwiperSlide key={item.id} className="overflow-visible">
