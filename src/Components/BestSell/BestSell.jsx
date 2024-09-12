@@ -21,7 +21,7 @@ const BestSell = () => {
   const apiUrl = "https://fakestoreapi.com/products";
   const [products, setProducts] = useState([]);
  // const swiper = useSwiper();
-  let slideView =  width >= 768 ? 3: 1;
+  let slideView =  width >= 768 ? 2: 1;
   // let slideView = width >= 1200 ? 4 : width >= 768 ? 3 : 1;
   const getProducts = async () => {
     const products = await axios.get(apiUrl);
@@ -44,7 +44,7 @@ const BestSell = () => {
         </div>
       </div>
       <div
-        className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat bg-gradient-to-r from-[rgba(5,8,77,0.631)] to-[rgba(0,0,0,0.693)] bg-[url('https://cdn.msaaq.com/pages/239600/picinj2.jpg')] bg-fixed h-auto blur-sm"
+        className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat  bg-[url('https://cdn.msaaq.com/pages/239600/picinj2.jpg')] bg-fixed h-auto blur-sm"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.493),#4e325163 ),
            url("https://cdn.msaaq.com/pages/239600/picinj2.jpg")`,
