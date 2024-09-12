@@ -16,10 +16,11 @@ const Home = () => {
       <VidioSlid />
       <Services />
       <BestSell />
-    
+      <TestimonialsSlid />
+
       <Footer />
+
     </main>
   );
 };
-// <TestimonialsSlid />
 export default Home;

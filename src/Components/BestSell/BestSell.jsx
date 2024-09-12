@@ -66,7 +66,6 @@ const BestSell = () => {
         loop={true}
         keyboard={true}
         spaceBetween={2}
-        
         slidesPerView={ slideView }
         virtual
       >

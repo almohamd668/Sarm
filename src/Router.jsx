@@ -23,7 +23,7 @@ export const rout = createBrowserRouter([
         element: <Products />,
       },
       {
-        path: "products/product-info/:productId",
+        path: "product-info/:productId",
         element: <ProductInfo />,
       },
       {
