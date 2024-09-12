@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="grid grid-cols-2 items-center justify-center p-12 gap-5 max-sm:grid-cols-1 pt-[200px]">
+    <div className="grid grid-cols-2 items-center justify-center p-12 gap-5 max-sm:grid-cols-1 pt-[100px]">
       <div className="mx-auto w-full max-w-[550px]">
         <div className="mb-5">
           <h1 className="text-primary text-3xl mb-2.5">contact us</h1>
