@@ -24,7 +24,7 @@ const ProductInfo = () => {
 
 
   return (
-    <div className="info pt-[150px]">
+    <div className="info pt-[100px]">
       <Product product={product} showButton={false} />
     </div>
   );
