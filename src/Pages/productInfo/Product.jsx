@@ -7,13 +7,14 @@ import "./product.css";
 // {product.description}
 // {`Price :  ${product.price} $`}
 const Product = ({ product, showButton }) => {
+  console.log("anassssssssssssssss", product)
   return (
     <section className="">
       <div className="container grid grid-cols-1 md:grid-cols-2 w-full mx-auto my-10 max-w-full md:min-w-[500px] min-h-[200px] rounded-lg ">
         <div className="con-img bg-gradient-to-r from-darkSec h-full md:min-h-[300px] to-primary w-full max-w-full rounded-lg overflow-hidden">
           <img
-            src={img1}
-            // src={product.img_url}
+            // src={img1}
+            src={product.img_url}
             className="card-img transform hover:rotate-6 mx-auto max-w-full"
             // alt={product.title}
           />
