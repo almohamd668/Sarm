@@ -38,8 +38,8 @@ const Product = ({ product, showButton }) => {
         </div>
       </div>
 
-      <div className="con-vid grid grid-cols-1 md:grid-cols-2  px-10 items-end">
-        <div className="con-bar h-[200px] grid grid-rows-5 items-end w-full gap-5">
+      <div className="con-vid mb-28 grid grid-cols-1 md:grid-cols-2  px-10 items-end">
+        <div className="con-bar h-[200px] grid grid-rows-5 items-end w-full gap-y-16">
           <div className="con-bro1 grid w-full grid-rows-2 gap-3">
             <h3 className="text-white indent-5">html</h3>
             <div className="shadow-md shadow-secondary bg-slate-700 h-3 rounded-full flex text-trans1">
@@ -82,7 +82,7 @@ const Product = ({ product, showButton }) => {
           </div>
         </div>
 
-        <div className=" w-full h-[200px] mt-[100px] mx-auto md:me-auto flex justify-center md:justify-end  mx-10">
+        <div className=" w-full h-[200px]  mt-[150px] mx-auto md:me-auto flex justify-center md:justify-end ">
           <div className="mySwiper flex items-center justify-center relative mx-2">
             <video
               src={vid1}
