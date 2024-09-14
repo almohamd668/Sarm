@@ -12,17 +12,16 @@ const ProductInfo = () => {
 
   const apiUrl = "get_product_by_id.php";
   const [product, setProduct] = useState({});
- console.log( "dljflskjdfsdf",product)
 
 
- console.log(  "no",productId);
+
 
   const fetchFun = async (url, setState) => {
    
     try {
-      const response = await useAxios.post(url, { id: 18 });
+      const response = await useAxios.post(url, { id: productId });
       setState(response.data[0]);
-      console.log(response.data[0]);
+      // console.log(response.data[0]);
 
     } catch (error) {
       console.log(error.message);

@@ -16,7 +16,7 @@ function Header() {
         headerRef.current.style.background = "#0c1524";
         headerRef.current.style.padding = "12px 0  5px";
       } else {
-        headerRef.current.style.background = "transparent";
+        headerRef.current.style.background = "#181e2a";
         headerRef.current.style.padding = "12px 0  5px";
       }
     });
@@ -32,7 +32,7 @@ function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed pt-[8px] left-0 w-full z-50 transition-all duration-200"
+      className="fixed pt-[8px] left-0 w-full z-50 transition-all duration-200 bg-[#181e2a]"
     >
       <div
         className="container flex justify-between items-center
@@ -86,17 +86,20 @@ function Header() {
           <div className={`${menuOpen ? "flex" : "hidden"}`}>
             <ul
               className={` flex flex-col gap-4 p-4 bg-gradient-to-r from-primary to-darkSec   -z-10
-                  shadow-md rounded-md justify-center items-center absolute w-[100vw] top-0 left-0 h-[100vh] `}
+                  shadow-md rounded-md justify-center items-center absolute w-[100vw] top-[72px] left-0 h-[100vh] `}
             >
               {Links.map((link) => (
                 <li
                   key={link}
-                  className="bg-black/20 backdrop-blur-lg w-full text-center border-b border-cyan
-                    shadow-cyan py-2.5 text-lg font-medium text-white rounded-lg mt-1.5 hover:bg-gradient-to-r from-primary to-darkSec hover:backdrop-blur-lg "
+                  className=" "
                 >
                   <Link
                     to={`/${link.toLocaleLowerCase()}`}
-                    className="text-gray-600 hover:text-gray-900 transition-all duration-300"
+                    className="text-gray-600 hover:text-gray-900 transition-all duration-300 bg-black/20 
+                    backdrop-blur-lg text-center border-b border-cyan
+                    shadow-cyan py-2.5 text-lg font-medium text-white rounded-lg mt-1.5 hover:bg-gradient-to-r
+                     from-primary to-darkSec hover:backdrop-blur-lg w-[500px] inline-block " 
+                     onClick={handleToggleMenu}
                   >
                     {link == "" ? "Home" : link}
                   </Link>

@@ -53,15 +53,15 @@ const Slider = () => {
                 className="w-full h-full object-cover"
               />
               <div
-                className=" bottom-9 left-1 md:left-5 -top-[180px] md:-top-[450.1px]  relative  md:p-5 bg-gradient-to-r from-[#11609da6] to-[#739eb4a6] backdrop-blur-[2px] 
+                className=" bottom-9 left-1 md:left-5 -top-[70%] md:-top-[450px]  relative  md:p-5 bg-gradient-to-r from-[#11609da6] to-[#739eb4a6] backdrop-blur-[2px] 
                rounded-r-[10%] bg-opacity-20 bg-white   w-[55%]  md:w-[20%]"
               >
-                <p className="text-white italic text-[13px] md:text-lg p-1  font-mono capitalize md:leading-relaxed">
+                <p className="text-white text-[13px] md:text-lg p-1  font-mono capitalize md:leading-relaxed">
                   The website aims to promote physical fitness and encourage
                   people <br />
                   to engage in sports by providing inspiring and useful content.{" "}
                   <br />
-               <span className="hidden md:inline">   If you’re interested in sports and fitness🧑🏻‍🔬</span>
+              If you’re interested in sports and fitness🧑🏻‍🔬
                 </p>
               </div>
             </div>

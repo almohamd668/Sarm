@@ -20,6 +20,10 @@ export default {
           "0%": { transform: "translateX(0)", opacity: "0" },
           "100%": { transform: "translateX(10px)", opacity: "1" },
         },
+        increaseWidth: {
+          '0%': { width: '0' },
+          '100%': { width: 'var(--width)' },
+        },
         gradientX: {
           "0%, 100%": {
             "background-position": "0% 50%",
@@ -40,6 +44,7 @@ export default {
         rotateY: 'rotate-x 3s ease-in-out ',
         moveRight: "moveRight 1s ease-in-out",
         gradientX: "gradientX 5s ease infinite",
+        increaseWidth: 'increaseWidth 1s ease-in-out forwards',
       },
       backgroundSize: {
         '200%': '200%',
