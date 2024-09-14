@@ -89,7 +89,7 @@ const Products = () => {
           }}
           className="btn2"
         >
-          {cat == "special_products" ? "Exclusives" : cat}
+          {cat == "special_products" ? "Special" : cat}
         </button>
       );
     })}
@@ -110,7 +110,8 @@ const Products = () => {
         <div className="text-center p-5">
           <button
             onClick={handleShowMore}
-            className="bg-[#00ffff7d] hover:bg-[#00ffffaf] text-white px-4 py-2 rounded transition-all duration-300 w-[80%] font-bold"
+            className="bg-[#00ffff7d] hover:bg-[#00ffffaf] text-white px-4 py-2
+             rounded transition-all duration-300 w-[80%] font-bold"
           >
             Show More + +
           </button>

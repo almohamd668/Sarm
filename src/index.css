@@ -65,6 +65,7 @@ a {
   font-weight: bolder;
   /* color: rgba(236, 115, 236, 0.692); */
   color: orange;
+text-align: center;
 }
 
 .feature-card::before {

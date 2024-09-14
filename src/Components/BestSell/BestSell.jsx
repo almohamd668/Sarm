@@ -15,31 +15,54 @@ import {
   Keyboard,
   Navigation,
 } from "swiper/modules";
+import useAxios from "../../API/axiosGlobal";
+
+
+
 
 const BestSell = () => {
   const width = useScreenWidth();
-  const apiUrl = "https://fakestoreapi.com/products";
-  const [products, setProducts] = useState([]);
+  let bySec = "get_products_by_section.php";
+  const [SarmProducts, setSarmProducts] = useState([]);
+  const [SpisProducts, setSpisProducts] = useState([]);
+  const [mergedProducts, setMergedProducts] = useState([]);
  // const swiper = useSwiper();
-  let slideView =  width >= 768 ? 2: 1;
+  let slideView =  width >= 768 ? 3: 1;
   // let slideView = width >= 1200 ? 4 : width >= 768 ? 3 : 1;
-  const getProducts = async () => {
-    const products = await axios.get(apiUrl);
-    setProducts(products.data);
+
+
+
+  const fetchFun = async (url, setState, name = null) => {
+    console.log(name);
+    try {
+      const response = await useAxios.post(url, { name: name });
+      setState(response.data);
+      // console.log(response.data);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
- 
+
+  console.log("bestsel", mergedProducts);
   useEffect(() => {
-    getProducts();
-    console.log(products);
+    fetchFun(bySec, setSarmProducts,"sarms" );
+    fetchFun(bySec, setSpisProducts, "special_products");
+
+    console.log("bestsel", mergedProducts);
     
   }, []);
 
+  useEffect(() => {
+    setMergedProducts([...SarmProducts, ...SpisProducts]);
+    
+  }, [SarmProducts, SpisProducts]);
+
   return (
     <section className="relative">
-      <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-2 md:mb-8 pt-[30px] md:pt-[100px]">
+      <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-2 md:mb-8 pt-[30px] md:pt-[75px]">
         <div className="flex flex-col text-center lg:col-start-3">
-          <h2 className="text-xl md:text-4xl lg:text-6xl section-title md:mb-2 font-bold text-transparent text-trans">
-            SPECIAL PRODUCTS
+          <h2 className="text-xl md:text-4xl lg:text-6xl section-title md:mb-10 font-bold text-transparent text-trans">
+             Best Sell
           </h2>
         </div>
       </div>
@@ -55,8 +78,8 @@ const BestSell = () => {
         }}
       ></div>
       <Swiper
-        className="flex items-center justify-center"
-        modules={[Navigation, Pagination, Virtual, Keyboard]}
+        className="flex items-center justify-center mt-[50px]"
+        modules={[Navigation, Pagination, Keyboard]}
         pagination={{
           dynamicBullets: true,
           clickable: true,
@@ -64,22 +87,23 @@ const BestSell = () => {
         autoplay={{ delay: 3000 }}
         navigation={true}
         loop={true}
-        keyboard={true}
         spaceBetween={2}
         slidesPerView={ slideView }
-        virtual
+      
       >
-        {products.map((product) => {
+        {  mergedProducts.map((product) => {
           return (
             <SwiperSlide
               className="w-full h-full container"
-              key={product.id}
-              virtualIndex={product.id}
+              key={product.p_id}
+              
             >
               <ProductCart product={product} showButton={true} />
             </SwiperSlide>
           );
         })}
+  
+
       </Swiper>
     </section>
   );
