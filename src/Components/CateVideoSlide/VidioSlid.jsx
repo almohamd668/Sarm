@@ -89,7 +89,7 @@ const TestimonialsSlid = () => {
 
           <div className="w-full max-w-[90%] ">
             <Swiper
-              className="mySwiper h-full w-[200px] md:w-[80%] rounded-[20%] "
+              className="mySwiper h-full w-[232px] md:w-[80%] rounded-[20%] "
               modules={[Navigation,Autoplay]}
               // pagination parameter in modules up
               // pagination={{

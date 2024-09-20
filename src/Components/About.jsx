@@ -18,18 +18,18 @@ const About = () => {
       ></div>
       <div className="col-span-12 flex flex-col gap-2 md:gap-6 lg:col-span-8 text-center lg:col-start-3 mb-3 md:mb-8">
         <div className="flex flex-col text-center lg:col-start-3">
-          <h2 className="text-3xl md:text-4xl lg:text-6xl section-title mb-2 font-bold text-transparent text-trans1">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl section-title md:mb-2 font-bold text-transparent text-trans1">
             ABOUT US
           </h2>
         </div>
       </div>
       <div className="px-[30px] md:px-[150px] md:pe-[32px] relative mx-auto flex h-full w-full items-start justify-center">
-        <div className="flex flex-col gap-2  md:gap-6 items-start lg:flex-row order-2">
-          <div className="w-full lg:w-1/2 relative block md:hidden ">
+        <div className="flex flex-col gap-0  md:gap-6 items-start lg:flex-row order-2">
+          <div className="w-full lg:w-1/2 relative block md:hidden  h-[100px] md:h-auto">
             <img
               src={image}
               alt="About Logo"
-              className="mx-auto h-full scale-[1.08] translate-y-[-7px]"
+              className="mx-auto h-full scale-95 md:scale-[1.08] translate-y-[-7px]"
             />
           </div>
           <div className="flex flex-col w-full lg:w-1/2 text-start">
@@ -38,21 +38,19 @@ const About = () => {
             an excellent manufacturer of performance enhancing drugs.
             </h2>
             <div
-              className="text-white  prose-custom-blockquote max-w-full
-             italic text-center line-clamp-4 text-sm md:text-xl  px-4 md:px-[35px]"
+              className="text-white/95   max-w-full
+             italic text-center  text-sm md:text-[17px] font-semibold   md:px-[35px]"
             >
-              <p>
+              <p className=" ">
                 We
                 care for the quality of our products we offer to our clients.
                 For ensuring the quality and effectiveness of our drugs, we have
                 got a dedicated research and development centre where our
                 professionals are always seeking to make our products more
-                effective. We are enthusiastic and passionate about providing
-                quality products and services that improve performance and
-                deliver outstanding results to our customers.
+                effective. 
               </p>
             </div>
-            <div className="col-span-12 mt-4 flex flex-wrap gap-2 justify-start">
+            <div className="col-span-12 mt-1 md:mt-4 flex flex-wrap gap-2 justify-start">
               <a
                 role="button"
                 target="blank"
