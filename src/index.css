@@ -65,7 +65,7 @@ a {
   font-weight: bolder;
   /* color: rgba(236, 115, 236, 0.692); */
   color: orange;
-text-align: center;
+  text-align: center;
 }
 
 .feature-card::before {
@@ -97,7 +97,6 @@ text-align: center;
   border-radius: 14px 22px 22px;
 }
 
-
 .btn2:hover {
   border: 1px solid #fff;
   text-shadow: -2px -2px 10px #ffffff7c;
@@ -106,15 +105,17 @@ text-align: center;
 }
 @media (max-width: 765px) {
   .btn2 {
-   
     font-weight: 600;
- 
     font-size: 16px;
-   
     padding: 5px 14px;
-
   }
-  
+  .mySwiper {
+    position: inherit !important;
+  }
+  .mySwiper .swiper-button-prev,
+  .mySwiper  .swiper-button-next {
+    top: 67% !important;
+  }
 }
 .btn3 {
   backdrop-filter: blur(3px);
@@ -137,7 +138,6 @@ text-align: center;
 
 .bt {
   text-shadow: -2px -2px 10px #ffffff7c;
- 
 }
 @keyframes identifier {
 }

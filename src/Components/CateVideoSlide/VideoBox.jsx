@@ -6,7 +6,7 @@ const VideoBox = ({ name, image }) => {
         loop
         muted
         autoPlay
-        className=" h-[300px] md:h-[400px] w-full md:w-[50%] object-cover rounded-[20%] bg-opacity-10"
+        className=" h-[220px] md:h-[400px] w-[220px] md:w-[50%] object-cover rounded-[20%] bg-opacity-10"
       ></video>
       <div className="absolute inset-0 flex items-end justify-center pb-4">
         <span

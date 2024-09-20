@@ -16,9 +16,6 @@ const Home = () => {
       <Services />
       <BestSell />
       <TestimonialsSlid />
-
-     
-
     </main>
   );
 };

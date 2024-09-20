@@ -19,7 +19,7 @@ const Footer = () => {
         <li>1. Scratch the QR code on the back of the package.</li>
         <li>2. Use your smartphone camera to scan the QR code.</li>
         <li>3. Follow the link that the QR code refers to.</li>
-        <li className="font-bold italic">Note: The QR code can only be scanned once.</li>
+        <li className="font-bold italic">Note: The QR code can only be scanned once, After scanning the QR code it will be destroyed automatically..</li>
       </ol>
     </div>
 

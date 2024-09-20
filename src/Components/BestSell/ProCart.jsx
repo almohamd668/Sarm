@@ -9,7 +9,7 @@ const ProCart = ({ product, showButton }) => {
       <div className="relative mb-8 rounded-4xl flex items-center justify-center shadow-lg max-w-4xl mx-auto ">
         <img
           src={product.img_url}
-          className="h-full min-w-32 w-full md:w-[400px] transition-transform duration-500 object-cover rounded-[30%] bg-transparent"
+          className={` min-w-32 w-[225px] md:w-[400px] h-[220px] md:h-[320px]   transition-transform duration-500 object-cover rounded-[30%] bg-transparent`}
           alt="ATEM"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-cyan bg-opacity-[0.25] rounded-[30%] backdrop-filter backdrop-blur-[3px]  p-4 opacity-0 hover:opacity-100 transform -translate-y-1 hover:translate-y-0 transition-all duration-500">

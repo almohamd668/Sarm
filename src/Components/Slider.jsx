@@ -53,15 +53,19 @@ const Slider = () => {
                 className="w-full h-full object-cover"
               />
               <div
-                className=" bottom-9 left-1 md:left-5 -top-[70%] md:-top-[450px]  relative  md:p-5 bg-gradient-to-r from-[#11609da6] to-[#739eb4a6] backdrop-blur-[2px] 
+                className=" bottom-9 left-1 md:left-5 -top-[80%] md:-top-[450px]  relative  md:p-5 bg-gradient-to-r from-[#11609da6] to-[#739eb4a6] backdrop-blur-[2px] 
                rounded-r-[10%] bg-opacity-20 bg-white   w-[55%]  md:w-[20%]"
               >
-                <p className="text-white text-[13px] md:text-lg p-1  font-mono capitalize md:leading-relaxed">
-                  The website aims to promote physical fitness and encourage
-                  people <br />
-                  to engage in sports by providing inspiring and useful content.{" "}
+                <p className="text-white text-[13px] md:text-[16px] p-1  font-mono capitalize md:leading-relaxed">
+                  <strong className="text-[14px] md:text-[18px]">Titans Pharmaceuticals Ltd being
+                    founded by professional bodybuilders and suppliers specialized
+                    in medicine. 
+                  </strong>
                   <br />
-              If you’re interested in sports and fitness🧑🏻‍🔬
+                <span className="font-semibold">    The company produces a wide range of human grade
+                   pharmaceuticals in dosage forms including tables and liquid.</span>
+                  <br />
+                  Share New Continue   
                 </p>
               </div>
             </div>

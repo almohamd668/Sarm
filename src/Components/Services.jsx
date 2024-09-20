@@ -13,7 +13,7 @@ const Services = () => {
       <div className="col-span-12 flex flex-col gap-6 lg:col-span-8 text-center lg:col-start-3 mb-2 md:mb-8 pt-[20px] md:pt-[50px]">
         <div className="flex flex-col text-center lg:col-start-3">
           <h2 className="text-lg md:text-4xl lg:text-6xl section-title md:mb-2 font-bold text-transparent text-trans">
-            We support more than <br className="hidden md:inline" /> 10,000 professional supplement product 
+            We support more than <br className="hidden md:inline" /> 10,000 professional supplement products 
           </h2>
         </div>
       </div>
@@ -33,7 +33,7 @@ const Services = () => {
           <div className="feature-card flex flex-col items-center gap-4">
             <div className="feature-text text-center">
               <h3 className="text-white text-2xl md:text-3xl lg:text-[40px] feature-title font-semibold">
-                1.5k+
+              +1.5k
               </h3>
               <div className="feature-description text-lg md:text-xl text-white">
                 <p>Happy clients</p>
@@ -46,7 +46,7 @@ const Services = () => {
                 +10,000
               </h3>
               <div className="feature-description text-lg md:text-xl text-white">
-                <p>Visitors</p>
+                <p>Website Visitors</p>
               </div>
             </div>
           </div>
