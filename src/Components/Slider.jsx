@@ -64,8 +64,8 @@ const Slider = () => {
                   <br />
                 <span className="font-semibold">    The company produces a wide range of human grade
                    pharmaceuticals in dosage forms including tables and liquid.</span>
-                  <br />
-                  Share New Continue   
+                  
+           
                 </p>
               </div>
             </div>

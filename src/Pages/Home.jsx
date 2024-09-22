@@ -4,7 +4,10 @@ import Services from "../Components/Services";
 import Slider from "./../Components/Slider";
 import BestSell from "../Components/BestSell/BestSell";
 import VidioSlid from "../Components/CateVideoSlide/VidioSlid";
+import ProductionStagesVid from "../Components/ProductionStagesVid";
 // import TestApi from "./Products/TestApi";
+import ComingSoon from './../Components/ComingSoon';
+
 // <TestApi />
 
 const Home = () => {
@@ -14,8 +17,10 @@ const Home = () => {
       <About />
       <VidioSlid />
       <Services />
+      <ProductionStagesVid/>
       <BestSell />
       <TestimonialsSlid />
+      <ComingSoon/>
     </main>
   );
 };
