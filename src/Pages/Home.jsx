@@ -15,11 +15,15 @@ const Home = () => {
     <main className="w-full">
       <Slider />
       <About />
+{/* 
       <VidioSlid />
-      <Services />
-      <ProductionStagesVid/>
-      <BestSell />
+      <Services /> 
+         <ProductionStagesVid/>
+         <BestSell />
       <TestimonialsSlid />
+      */ }
+   
+      
       <ComingSoon/>
     </main>
   );

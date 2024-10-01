@@ -2,7 +2,7 @@ import image from "../../assets/bout-logo2.png";
 
 const About = () => {
   return (
-    <div className="relative h-[95vh] py-10 md:py-10 md:pt-[100px]">
+    <div className="relative h-[100vh] py-10 md:py-20 md:pt-[100px]">
       <div
         className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat bg-gradient-to-r
          from-[#05364d77] to-[rgba(0,0,0,0.49)] bg-[url('https://cdn.msaaq.com/pages/239600/picinj2.jpg')] 
@@ -34,7 +34,7 @@ const About = () => {
           </div>
 
           <div className="flex flex-col w-full lg:w-1/2 text-start items-center justify-start mt-[40px]">
-            <h2 className="text-white text-lg md:text-4xl section-title mb-2 font-bold text-center italic">
+            <h2 className="text-white text-lg md:text-[34px] leading-[35px] section-title mb-2 font-bold text-center italic">
               We are looking for distribution partners with experience in all
               countries Please do not hesitate to contact us if you have the
               required experience and capabilities
